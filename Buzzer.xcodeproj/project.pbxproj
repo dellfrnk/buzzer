@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45E69A841CDAE51E00D7D282 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E69A831CDAE51E00D7D282 /* Game.swift */; };
+		45E69A861CDAE59100D7D282 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E69A851CDAE59100D7D282 /* Player.swift */; };
+		45E69A881CDAE5A700D7D282 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E69A871CDAE5A700D7D282 /* Question.swift */; };
+		45E69A8A1CDAE5B900D7D282 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E69A891CDAE5B800D7D282 /* Answer.swift */; };
 		45FD36901CDAD677000163A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD368F1CDAD677000163A0 /* AppDelegate.swift */; };
-		45FD36921CDAD677000163A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD36911CDAD677000163A0 /* ViewController.swift */; };
+		45FD36921CDAD677000163A0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FD36911CDAD677000163A0 /* MenuViewController.swift */; };
 		45FD36951CDAD677000163A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45FD36931CDAD677000163A0 /* Main.storyboard */; };
 		45FD36981CDAD677000163A0 /* Buzzer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45FD36961CDAD677000163A0 /* Buzzer.xcdatamodeld */; };
 		45FD369A1CDAD677000163A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FD36991CDAD677000163A0 /* Assets.xcassets */; };
@@ -35,9 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45E69A831CDAE51E00D7D282 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		45E69A851CDAE59100D7D282 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		45E69A871CDAE5A700D7D282 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		45E69A891CDAE5B800D7D282 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		45FD368C1CDAD677000163A0 /* Buzzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buzzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FD368F1CDAD677000163A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		45FD36911CDAD677000163A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45FD36911CDAD677000163A0 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		45FD36941CDAD677000163A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45FD36971CDAD677000163A0 /* Buzzer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Buzzer.xcdatamodel; sourceTree = "<group>"; };
 		45FD36991CDAD677000163A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +84,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45E69A801CDAE46400D7D282 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45E69A831CDAE51E00D7D282 /* Game.swift */,
+				45E69A851CDAE59100D7D282 /* Player.swift */,
+				45E69A871CDAE5A700D7D282 /* Question.swift */,
+				45E69A891CDAE5B800D7D282 /* Answer.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		45E69A811CDAE46F00D7D282 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45FD36911CDAD677000163A0 /* MenuViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		45E69A821CDAE47800D7D282 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		45FD36831CDAD677000163A0 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +133,10 @@
 		45FD368E1CDAD677000163A0 /* Buzzer */ = {
 			isa = PBXGroup;
 			children = (
+				45E69A801CDAE46400D7D282 /* Model */,
+				45E69A811CDAE46F00D7D282 /* Controller */,
+				45E69A821CDAE47800D7D282 /* View */,
 				45FD368F1CDAD677000163A0 /* AppDelegate.swift */,
-				45FD36911CDAD677000163A0 /* ViewController.swift */,
 				45FD36931CDAD677000163A0 /* Main.storyboard */,
 				45FD36991CDAD677000163A0 /* Assets.xcassets */,
 				45FD369B1CDAD677000163A0 /* LaunchScreen.storyboard */,
@@ -260,8 +296,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				45FD36981CDAD677000163A0 /* Buzzer.xcdatamodeld in Sources */,
-				45FD36921CDAD677000163A0 /* ViewController.swift in Sources */,
+				45FD36921CDAD677000163A0 /* MenuViewController.swift in Sources */,
 				45FD36901CDAD677000163A0 /* AppDelegate.swift in Sources */,
+				45E69A8A1CDAE5B900D7D282 /* Answer.swift in Sources */,
+				45E69A881CDAE5A700D7D282 /* Question.swift in Sources */,
+				45E69A861CDAE59100D7D282 /* Player.swift in Sources */,
+				45E69A841CDAE51E00D7D282 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +528,7 @@
 				45FD36B91CDAD677000163A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45FD36BA1CDAD677000163A0 /* Build configuration list for PBXNativeTarget "BuzzerTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +537,7 @@
 				45FD36BC1CDAD677000163A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45FD36BD1CDAD677000163A0 /* Build configuration list for PBXNativeTarget "BuzzerUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +546,7 @@
 				45FD36BF1CDAD677000163A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

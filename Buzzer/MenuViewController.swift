@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +21,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func playGame(sender: AnyObject) {
+        print("Hello")
+    }
 }
 
