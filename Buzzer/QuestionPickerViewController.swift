@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuestionPickerViewController: UIViewController {
+class QuestionPickerViewController: UIViewController, UICollectionViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,11 @@ class QuestionPickerViewController: UIViewController {
     }
     
     @IBOutlet weak var questionCollectionView: UICollectionView!
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath inexPath: NSIndexPath)
+    {
+        
+    }
 
     /*
     // MARK: - Navigation
