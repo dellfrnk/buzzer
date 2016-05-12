@@ -7,3 +7,10 @@
 //
 
 import Foundation
+class Question {
+    weak var category: Category?
+    var price = 0
+    var question = ""
+    var answer = ""
+    var playerAnswer = ""
+}

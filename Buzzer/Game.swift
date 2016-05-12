@@ -7,3 +7,17 @@
 //
 
 import Foundation
+class Game {
+    
+    var player1 : Player?
+    var player2 : Player?
+    var player3 : Player?
+
+    var currentPlayer:  Player?
+    
+    //array, empty list
+    var questions: [Question] = []
+    var currentQuestion: Question?
+    
+    
+}
