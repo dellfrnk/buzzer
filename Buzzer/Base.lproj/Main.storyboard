@@ -120,18 +120,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CHf-xF-day">
+                                <rect key="frame" x="495" y="117" width="85" height="37"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXR-yN-UIf">
                                 <rect key="frame" x="282" y="296" width="36" height="30"/>
                                 <state key="normal" title="PLAY">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="O1Q-Wy-FbV" kind="show" id="ZOI-5r-XFd"/>
+                                    <action selector="playGameAction:" destination="W3V-dH-2UU" eventType="touchUpInside" id="JLa-A3-w2T"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CHf-xF-day">
-                                <rect key="frame" x="495" y="117" width="85" height="37"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -168,6 +168,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="player1Name" destination="i5p-cO-Acc" id="LSp-mS-hxl"/>
+                        <outlet property="player2Name" destination="QnV-xw-qQO" id="i1A-gx-P2A"/>
+                        <outlet property="player3Name" destination="dRg-dK-dpa" id="X9C-8S-3Tb"/>
+                        <segue destination="O1Q-Wy-FbV" kind="show" identifier="GoToQuestionPicker" id="5Hx-Zh-7dQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXV-ft-qkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXf-p5-VnG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011" y="571"/>
+            <point key="canvasLocation" x="1026" y="663"/>
         </scene>
     </scenes>
 </document>

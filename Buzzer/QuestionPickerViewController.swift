@@ -22,6 +22,7 @@ class QuestionPickerViewController: UIViewController, UICollectionViewDelegate, 
     }
     
     @IBOutlet weak var questionCollectionView: UICollectionView!
+    var game: Game?
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath inexPath: NSIndexPath)
     {
