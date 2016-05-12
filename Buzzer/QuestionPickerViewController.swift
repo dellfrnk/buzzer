@@ -26,7 +26,7 @@ class QuestionPickerViewController: UIViewController, UICollectionViewDelegate, 
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath inexPath: NSIndexPath)
     {
-        
+        //*
     }
 
     /*
