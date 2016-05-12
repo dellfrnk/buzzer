@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4526681D1CE3572600A8DF62 /* Json in Resources */ = {isa = PBXBuildFile; fileRef = 4526681C1CE3572600A8DF62 /* Json */; };
+		4526681F1CE4074800A8DF62 /* QuestionPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */; };
 		45C7FB551CE1739C00A5FCB7 /* PlayInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7FB541CE1739C00A5FCB7 /* PlayInputViewController.swift */; };
 		45C7FB571CE1782700A5FCB7 /* QuestionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7FB561CE1782700A5FCB7 /* QuestionPickerViewController.swift */; };
 		45E69A841CDAE51E00D7D282 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E69A831CDAE51E00D7D282 /* Game.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		4526681C1CE3572600A8DF62 /* Json */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Json; sourceTree = "<group>"; };
+		4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPriceCell.swift; sourceTree = "<group>"; };
 		45C7FB541CE1739C00A5FCB7 /* PlayInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayInputViewController.swift; sourceTree = "<group>"; };
 		45C7FB561CE1782700A5FCB7 /* QuestionPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPickerViewController.swift; sourceTree = "<group>"; };
 		45E69A831CDAE51E00D7D282 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		45E69A821CDAE47800D7D282 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				45C7FB571CE1782700A5FCB7 /* QuestionPickerViewController.swift in Sources */,
 				45FD36981CDAD677000163A0 /* Buzzer.xcdatamodeld in Sources */,
 				45FD36921CDAD677000163A0 /* MenuViewController.swift in Sources */,
+				4526681F1CE4074800A8DF62 /* QuestionPriceCell.swift in Sources */,
 				45FD36901CDAD677000163A0 /* AppDelegate.swift in Sources */,
 				45E69A8A1CDAE5B900D7D282 /* Answer.swift in Sources */,
 				45E69A881CDAE5A700D7D282 /* Question.swift in Sources */,
