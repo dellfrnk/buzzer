@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4526681D1CE3572600A8DF62 /* Json in Resources */ = {isa = PBXBuildFile; fileRef = 4526681C1CE3572600A8DF62 /* Json */; };
 		4526681F1CE4074800A8DF62 /* QuestionPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */; };
+		456DFC681CEABC7D00C865A0 /* Category.json in Resources */ = {isa = PBXBuildFile; fileRef = 456DFC671CEABC7D00C865A0 /* Category.json */; };
+		456DFC6A1CEABC8500C865A0 /* Question.json in Resources */ = {isa = PBXBuildFile; fileRef = 456DFC691CEABC8500C865A0 /* Question.json */; };
 		45C7FB551CE1739C00A5FCB7 /* PlayInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7FB541CE1739C00A5FCB7 /* PlayInputViewController.swift */; };
 		45C7FB571CE1782700A5FCB7 /* QuestionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7FB561CE1782700A5FCB7 /* QuestionPickerViewController.swift */; };
 		45E69A841CDAE51E00D7D282 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E69A831CDAE51E00D7D282 /* Game.swift */; };
@@ -43,8 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4526681C1CE3572600A8DF62 /* Json */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Json; sourceTree = "<group>"; };
 		4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPriceCell.swift; sourceTree = "<group>"; };
+		456DFC671CEABC7D00C865A0 /* Category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Category.json; path = Json/Category.json; sourceTree = "<group>"; };
+		456DFC691CEABC8500C865A0 /* Question.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question.json; path = Json/Question.json; sourceTree = "<group>"; };
 		45C7FB541CE1739C00A5FCB7 /* PlayInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayInputViewController.swift; sourceTree = "<group>"; };
 		45C7FB561CE1782700A5FCB7 /* QuestionPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPickerViewController.swift; sourceTree = "<group>"; };
 		45E69A831CDAE51E00D7D282 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -92,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		456DFC661CEABC5700C865A0 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				456DFC691CEABC8500C865A0 /* Question.json */,
+				456DFC671CEABC7D00C865A0 /* Category.json */,
+			);
+			name = Json;
+			sourceTree = "<group>";
+		};
 		45E69A801CDAE46400D7D282 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +135,7 @@
 		45FD36831CDAD677000163A0 = {
 			isa = PBXGroup;
 			children = (
-				4526681C1CE3572600A8DF62 /* Json */,
+				456DFC661CEABC5700C865A0 /* Json */,
 				45FD368E1CDAD677000163A0 /* Buzzer */,
 				45FD36A61CDAD677000163A0 /* BuzzerTests */,
 				45FD36B11CDAD677000163A0 /* BuzzerUITests */,
@@ -281,9 +292,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456DFC681CEABC7D00C865A0 /* Category.json in Resources */,
 				45FD369D1CDAD677000163A0 /* LaunchScreen.storyboard in Resources */,
 				45FD369A1CDAD677000163A0 /* Assets.xcassets in Resources */,
-				4526681D1CE3572600A8DF62 /* Json in Resources */,
+				456DFC6A1CEABC8500C865A0 /* Question.json in Resources */,
 				45FD36951CDAD677000163A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
