@@ -18,6 +18,15 @@ class Game {
     //array, empty list
     var questions: [Question] = []
     var currentQuestion: Question?
+    var categories: [Category] = []
     
+    func loadCategoriesForNewGame() {
+        do {
+            categories = try Category.loadCategories()
+        }
+        catch let error {
+            print("Error loading categories: \(error)")
+        }
+    }
     
 }

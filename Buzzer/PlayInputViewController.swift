@@ -47,6 +47,7 @@ class PlayerInputViewController : UIViewController {
                 game.player1 = player1
                 game.player2 = player2
                 game.player3 = player3
+                game.loadCategoriesForNewGame()
                 
                 destinationViewController.game = game
             }
