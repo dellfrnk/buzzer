@@ -12,5 +12,18 @@ class QuestionPriceCell : UICollectionViewCell {
 
 
     @IBOutlet weak var priceLabel: UILabel!
+    
+    var answered = false {
+        //action - monitors, observe what happens to a variable
+        //hide price label if answered is set
+        didSet {
+            priceLabel.hidden = answered
+            
+        }
+        willSet {
+            //make visible and then set for e.g.
+            print("set the value of whatever")
+        }
+    }
 }
 

@@ -26,6 +26,20 @@ class PlayerInputViewController : UIViewController {
         performSegueWithIdentifier("GoToQuestionPicker", sender: nil)
     }
     
+  //  func formattedPrice() -> String {
+ //       return "$\(price)"
+ //   }
+    
+    class func parseJSON(jsonDictionary: Dictionary<String, AnyObject>) -> Question {
+        let question = Question()
+        question.question = jsonDictionary["question"] as! String
+        question.price = jsonDictionary["value"] as! Int
+        question.answer = jsonDictionary["answer"] as! String
+        
+        return question
+    }
+
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "GoToQuestionPicker" {
             
