@@ -54,6 +54,47 @@ class Category {
         //*NSLocalized for internalization
       throw NSError(domain: "Buzzer!", code: 100, userInfo: [NSLocalizedDescriptionKey: "Found invalid JSON data when looking for file Question.json"])
     }
+    
+    
+    //************
+    
+    //load categories from internet
+    class func loadCategories(numberOfCategories: Int, responseHandler : (error : NSError? , items : Array<Category>?) -> ()) {
+        
+        // TODO : Student Enhancement: Get random number and pass as offset to randomize the game somewhat.
+      
+        //interpolation  == \(numberOfCategories)
+        let url = NSURL(string: "http://jservice.io/api/categories?count=\(numberOfCategories)")
+        let request = NSURLRequest(URL: url!)
+        
+        //asynchronous
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            (data, response, requestError) -> Void in
+            //NSData, URLResponse,
+            do {
+                let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
+                
+                var categories = Array<Category>()
+                
+                if let array = jsonData as? Array<AnyObject> {
+                    print(array)
+                    for object: AnyObject in array {
+                        let category = Category.parseJSON(object as! Dictionary<String, AnyObject>)
+                        categories.append(category)
+                    }
+                }
+                
+                //is also a closure
+                responseHandler(error: requestError, items: categories)
+            } catch {
+                print(error)
+                responseHandler(error: requestError, items: nil)
+            }
+            
+        }
+        
+        task.resume()
+    }
 
     
 }

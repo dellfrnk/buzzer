@@ -95,19 +95,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Who Buzzed In?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mR2-db-PqZ">
-                                <rect key="frame" x="237" y="360" width="127" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who Buzzed In?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mR2-db-PqZ">
+                                <rect key="frame" x="239" y="360" width="124" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kat-c9-oMY">
-                                <rect key="frame" x="273" y="550" width="55" height="30"/>
-                                <state key="normal" title="Player 2"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hk7-IQ-vCb">
+                                <rect key="frame" x="20" y="517" width="53" height="30"/>
+                                <state key="normal" title="Player 1"/>
+                                <connections>
+                                    <action selector="player1ButtonPressed:" destination="dST-qR-P18" eventType="touchUpInside" id="4zI-jP-T95"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeC-gO-4B9">
-                                <rect key="frame" x="529" y="550" width="56" height="30"/>
-                                <state key="normal" title="Player 3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kat-c9-oMY">
+                                <rect key="frame" x="273" y="517" width="55" height="30"/>
+                                <state key="normal" title="Player 2"/>
+                                <connections>
+                                    <action selector="player2ButtonPressed:" destination="dST-qR-P18" eventType="touchUpInside" id="Ioi-AG-uJ4"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5tq-ks-E9g">
                                 <rect key="frame" x="20" y="195" width="560" height="128"/>
@@ -119,9 +125,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hk7-IQ-vCb">
-                                <rect key="frame" x="20" y="550" width="53" height="30"/>
-                                <state key="normal" title="Player 1"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeC-gO-4B9">
+                                <rect key="frame" x="524" y="517" width="56" height="30"/>
+                                <state key="normal" title="Player 3"/>
+                                <connections>
+                                    <action selector="player3ButtonPressed:" destination="dST-qR-P18" eventType="touchUpInside" id="RWg-HH-TuH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -131,12 +140,15 @@
                             <constraint firstItem="fFl-3y-qAo" firstAttribute="centerX" secondItem="svv-Zd-w2b" secondAttribute="centerX" id="2HR-Mm-cHd"/>
                             <constraint firstItem="n83-7F-5y9" firstAttribute="top" secondItem="fFl-3y-qAo" secondAttribute="bottom" constant="433" id="2Kk-vQ-CbV"/>
                             <constraint firstItem="5tq-ks-E9g" firstAttribute="top" secondItem="fFl-3y-qAo" secondAttribute="bottom" constant="28" id="36e-td-kg0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QeC-gO-4B9" secondAttribute="trailing" constant="-5" id="Hck-NE-JnQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QeC-gO-4B9" secondAttribute="trailing" id="Hck-NE-JnQ"/>
                             <constraint firstItem="bSN-vV-QoF" firstAttribute="top" secondItem="Pp9-of-2pj" secondAttribute="bottom" constant="21" id="LRJ-bf-MLr"/>
+                            <constraint firstItem="n83-7F-5y9" firstAttribute="top" secondItem="kat-c9-oMY" secondAttribute="bottom" constant="53" id="MoG-tT-0Gk"/>
                             <constraint firstItem="fFl-3y-qAo" firstAttribute="top" secondItem="bSN-vV-QoF" secondAttribute="bottom" constant="35" id="OOr-se-nuF"/>
                             <constraint firstItem="5tq-ks-E9g" firstAttribute="trailing" secondItem="svv-Zd-w2b" secondAttribute="trailingMargin" id="RjG-gb-vYK"/>
-                            <constraint firstItem="Hk7-IQ-vCb" firstAttribute="leading" secondItem="svv-Zd-w2b" secondAttribute="leadingMargin" constant="-3" id="YNz-fF-0f6"/>
-                            <constraint firstItem="mR2-db-PqZ" firstAttribute="centerX" secondItem="svv-Zd-w2b" secondAttribute="centerX" id="c3G-Cm-kD1"/>
+                            <constraint firstItem="Hk7-IQ-vCb" firstAttribute="leading" secondItem="svv-Zd-w2b" secondAttribute="leadingMargin" id="YNz-fF-0f6"/>
+                            <constraint firstItem="n83-7F-5y9" firstAttribute="top" secondItem="Hk7-IQ-vCb" secondAttribute="bottom" constant="53" id="b3A-BB-dyx"/>
+                            <constraint firstItem="n83-7F-5y9" firstAttribute="top" secondItem="QeC-gO-4B9" secondAttribute="bottom" constant="53" id="bsQ-VZ-Wye"/>
+                            <constraint firstItem="mR2-db-PqZ" firstAttribute="centerX" secondItem="svv-Zd-w2b" secondAttribute="centerX" constant="1" id="c3G-Cm-kD1"/>
                             <constraint firstItem="mR2-db-PqZ" firstAttribute="top" secondItem="5tq-ks-E9g" secondAttribute="bottom" constant="37" id="d3d-i0-DgS"/>
                             <constraint firstItem="kat-c9-oMY" firstAttribute="centerX" secondItem="svv-Zd-w2b" secondAttribute="centerX" id="etA-ze-dul"/>
                             <constraint firstItem="Hk7-IQ-vCb" firstAttribute="baseline" secondItem="QeC-gO-4B9" secondAttribute="baseline" id="fFA-uo-wF2"/>
@@ -144,7 +156,7 @@
                             <constraint firstItem="fFl-3y-qAo" firstAttribute="top" secondItem="bSN-vV-QoF" secondAttribute="bottom" constant="35" id="ndt-eR-mbP"/>
                             <constraint firstItem="5tq-ks-E9g" firstAttribute="leading" secondItem="svv-Zd-w2b" secondAttribute="leadingMargin" id="pNs-MG-OUi"/>
                             <constraint firstItem="bSN-vV-QoF" firstAttribute="centerX" secondItem="svv-Zd-w2b" secondAttribute="centerX" id="tLg-OO-9KZ"/>
-                            <constraint firstItem="n83-7F-5y9" firstAttribute="top" secondItem="kat-c9-oMY" secondAttribute="bottom" constant="20" id="v5Q-7P-0jA"/>
+                            <constraint firstItem="n83-7F-5y9" firstAttribute="top" secondItem="kat-c9-oMY" secondAttribute="bottom" constant="53" id="v5Q-7P-0jA"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -159,7 +171,7 @@
                         <outlet property="categoryPriceLabel" destination="fFl-3y-qAo" id="Qaa-Pa-Vfa"/>
                         <outlet property="player1Button" destination="Hk7-IQ-vCb" id="m9X-0S-TIG"/>
                         <outlet property="player2Button" destination="kat-c9-oMY" id="czU-nP-5uH"/>
-                        <outlet property="playerButton" destination="QeC-gO-4B9" id="b43-Gz-eUx"/>
+                        <outlet property="player3Button" destination="QeC-gO-4B9" id="Snw-7e-mgz"/>
                         <outlet property="questionTextLabel" destination="5tq-ks-E9g" id="Cle-rn-eYf"/>
                     </connections>
                 </viewController>
@@ -331,7 +343,7 @@
                     </view>
                     <connections>
                         <outlet property="questionCollectionView" destination="eWB-HJ-lNb" id="2CE-vA-kkr"/>
-                        <segue destination="dST-qR-P18" kind="show" id="X0H-Tp-YLy"/>
+                        <segue destination="dST-qR-P18" kind="show" identifier="ShowQuestionBuzzSegue" id="X0H-Tp-YLy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXf-p5-VnG" userLabel="First Responder" sceneMemberID="firstResponder"/>

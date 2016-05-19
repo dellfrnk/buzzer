@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let numberOfCategories = 4
+ let numberOfCategories = 4
 private let questionsPerCategory = 5
 
 class QuestionPickerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -34,6 +34,15 @@ class QuestionPickerViewController: UIViewController, UICollectionViewDelegate, 
         //*
    // }
 
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "ShowQuestionBuzzSegue" {
+            if let destinationViewController = segue.destinationViewController as? QuestionBuzzViewController {
+                destinationViewController.game = game
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 

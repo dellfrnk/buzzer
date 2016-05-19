@@ -29,4 +29,21 @@ class Game {
         }
     }
     
+    // with 1 arg and inside with 2 args
+    
+    func loadCategoriesForNewGame(numberOfCategories: Int, responseActionHandler : (error : NSError?) -> ()) {
+        
+        //closure with 2 args
+        Category.loadCategories(numberOfCategories, responseHandler: { (error, items) -> () in
+            self.categories = items!
+            
+            if let categoriesArray = items {
+                self.categories = categoriesArray
+            }
+            
+            responseActionHandler(error: error)
+            
+        })
+    }
+
 }
