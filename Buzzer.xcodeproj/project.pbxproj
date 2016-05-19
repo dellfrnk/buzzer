@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		451F69E51CED4CFC00CEC3C4 /* QuestionBuzzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69E41CED4CFC00CEC3C4 /* QuestionBuzzViewController.swift */; };
 		4526681F1CE4074800A8DF62 /* QuestionPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */; };
 		456DFC681CEABC7D00C865A0 /* Category.json in Resources */ = {isa = PBXBuildFile; fileRef = 456DFC671CEABC7D00C865A0 /* Category.json */; };
 		456DFC6A1CEABC8500C865A0 /* Question.json in Resources */ = {isa = PBXBuildFile; fileRef = 456DFC691CEABC8500C865A0 /* Question.json */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		451F69E41CED4CFC00CEC3C4 /* QuestionBuzzViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionBuzzViewController.swift; sourceTree = "<group>"; };
 		4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPriceCell.swift; sourceTree = "<group>"; };
 		456DFC671CEABC7D00C865A0 /* Category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Category.json; path = Json/Category.json; sourceTree = "<group>"; };
 		456DFC691CEABC8500C865A0 /* Question.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question.json; path = Json/Question.json; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				45FD36911CDAD677000163A0 /* MenuViewController.swift */,
 				45C7FB541CE1739C00A5FCB7 /* PlayInputViewController.swift */,
 				45C7FB561CE1782700A5FCB7 /* QuestionPickerViewController.swift */,
+				451F69E41CED4CFC00CEC3C4 /* QuestionBuzzViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				45C7FB551CE1739C00A5FCB7 /* PlayInputViewController.swift in Sources */,
 				45E69A861CDAE59100D7D282 /* Player.swift in Sources */,
 				45E69A841CDAE51E00D7D282 /* Game.swift in Sources */,
+				451F69E51CED4CFC00CEC3C4 /* QuestionBuzzViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

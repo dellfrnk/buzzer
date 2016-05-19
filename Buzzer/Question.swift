@@ -12,6 +12,7 @@ class Question {
     var price = 0
     var question = ""
     var answer = ""
+    
     var playerAnswer = ""
     
     func formattedPrice() -> String {

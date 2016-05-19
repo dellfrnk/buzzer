@@ -49,6 +49,23 @@ class QuestionPickerViewController: UIViewController, UICollectionViewDelegate, 
        return numberOfCategories * questionsPerCategory
     }
     
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("QuestionPrice", forIndexPath: indexPath) as? QuestionPriceCell {
+            let price = priceFromIndexPath(indexPath)
+            cell.priceLabel.text = "$\(price)"
+            
+            let categoryIndex = categoryFromIndexPath(indexPath)
+            if categoryIndex < game?.categories.count {
+                let category = game?.categories[categoryIndex]
+                cell.answered = category?.answeredQuestions[price] != nil
+            }
+            
+            return cell
+        }
+        
+        return UICollectionViewCell(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    }
+    
    
     /*
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -64,6 +81,7 @@ class QuestionPickerViewController: UIViewController, UICollectionViewDelegate, 
     }
  */
   
+    //MARK: UICollectionViewDelegate
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let selectedPrice = priceFromIndexPath(indexPath)
@@ -83,6 +101,8 @@ class QuestionPickerViewController: UIViewController, UICollectionViewDelegate, 
     }
 
     
+    //MARK: Private
+    
     private func priceFromIndexPath(indexPath: NSIndexPath) -> Int {
         let row = indexPath.item / numberOfCategories
         let price = (row + 1) * 200
@@ -101,25 +121,11 @@ class QuestionPickerViewController: UIViewController, UICollectionViewDelegate, 
 //        return numberOfCategories * questionsPerCategory
 //    }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("QuestionPrice", forIndexPath: indexPath) as? QuestionPriceCell {
-            let price = priceFromIndexPath(indexPath)
-            cell.priceLabel.text = "$\(price)"
-            
-            let categoryIndex = categoryFromIndexPath(indexPath)
-            if categoryIndex < game?.categories.count {
-                let category = game?.categories[categoryIndex]
-                cell.answered = category?.answeredQuestions[price] != nil
-            }
-            
-            return cell
-        }
-        
-        return UICollectionViewCell(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-    }
+   
     
     // MARK: UICollectionViewDelegateFlowLayout
    
+    //MARK: UICollectionViewDelegateFlowLayout
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
        //  This should almost certainly be the correct kind of layout unless it has been changes in the storyboard
