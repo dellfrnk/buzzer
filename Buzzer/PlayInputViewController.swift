@@ -9,12 +9,17 @@
 import Foundation
 import UIKit
 
-class PlayerInputViewController : UIViewController {
+class PlayerInputViewController : UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.player1Name.delegate = self
+        self.player2Name.delegate = self
+        self.player3Name.delegate = self
     }
     
+    let unsafeChars = NSCharacterSet.alphanumericCharacterSet().invertedSet
+    let letters = NSCharacterSet.alphanumericCharacterSet()
     
     @IBOutlet weak var player1Name: UITextField!
     
@@ -29,6 +34,49 @@ class PlayerInputViewController : UIViewController {
   //  func formattedPrice() -> String {
  //       return "$\(price)"
  //   }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    //    print(textField1.text)
+        print("While entering the characters this method gets called")
+        
+        //let validTimeCharacterSet = NSCharacterSet(charactersInString: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
+        
+   
+       // NSLog(textField1.text!)
+        //var lastch = textField1.text!.characters.last!
+        //let rangeofChars = textField1.text!.rangeOfCharacterFromSet(letters.invertedSet)
+        
+        //var enteredByUser =
+        
+       
+        
+        let enteredByUserN = textField.text!
+            .componentsSeparatedByCharactersInSet(unsafeChars)
+            .joinWithSeparator("")
+        NSLog(enteredByUserN)
+        
+        
+        if textField.text!.rangeOfCharacterFromSet(letters.invertedSet) != nil {
+            print("invalid")
+            
+           textField.text = enteredByUserN
+        }
+        
+     //
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField)
+    {
+        let enteredByUserN = textField.text!
+            .componentsSeparatedByCharactersInSet(unsafeChars)
+            .joinWithSeparator("")
+        
+        if textField.text!.rangeOfCharacterFromSet(letters.invertedSet) != nil {
+           textField.text = enteredByUserN
+        }
+        
+    }
     
     class func parseJSON(jsonDictionary: Dictionary<String, AnyObject>) -> Question {
         let question = Question()
