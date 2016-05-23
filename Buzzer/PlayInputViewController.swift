@@ -1,10 +1,10 @@
-//
 //  PlayInputViewController.swift
 //  Buzzer
 //
 //  Created by leafranco on 2016-05-09.
 //  Copyright © 2016 dfranco. All rights reserved.
 //
+
 
 import Foundation
 import UIKit
@@ -16,6 +16,18 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
         self.player1Name.delegate = self
         self.player2Name.delegate = self
         self.player3Name.delegate = self
+        
+        playButton.transform = CGAffineTransformMakeScale(0.1, 0.1)
+        
+        UIView.animateWithDuration(2.0,
+                                   delay: 0,
+                                   usingSpringWithDamping: 0.20,
+                                   initialSpringVelocity: 6.00,
+                                   options: UIViewAnimationOptions.AllowUserInteraction,
+                                   animations: {
+                                    self.playButton.transform = CGAffineTransformIdentity
+            }, completion: nil)
+        
     }
     
     let unsafeChars = NSCharacterSet.alphanumericCharacterSet().invertedSet
@@ -27,9 +39,51 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var player3Name: UITextField!
     
+    @IBOutlet weak var playButton: UIButton!
+    
+
+    
+    
     @IBAction func playGameAction(sender: AnyObject) {
-        performSegueWithIdentifier("GoToQuestionPicker", sender: nil)
-    }
+        
+        var myColor : UIColor = UIColor( red: 0, green: 0, blue:0.75, alpha: 1.0 )
+        
+        if player1Name.text! == "" && player2Name.text! == "" && player3Name.text! == ""
+        {
+            myColor = UIColor( red: 0.75, green: 0, blue:0, alpha: 1.0 )
+            
+            if player1Name.text! == ""
+            {
+                 player1Name.layer.borderColor = myColor.CGColor
+                 player1Name.layer.borderWidth = 1.25
+            }
+            if player2Name.text! == ""
+            {
+                player2Name.layer.borderColor = myColor.CGColor
+                player2Name.layer.borderWidth = 1.25
+            }
+            if player3Name.text! == ""
+            {
+                player3Name.layer.borderColor = myColor.CGColor
+                player3Name.layer.borderWidth = 1.25
+            }
+           
+            
+        }
+        else {
+            player1Name.layer.borderColor = myColor.CGColor
+            player1Name.layer.borderWidth = 1
+
+            player2Name.layer.borderColor = myColor.CGColor
+            player2Name.layer.borderWidth = 1
+
+            player3Name.layer.borderColor = myColor.CGColor
+            player3Name.layer.borderWidth = 1
+
+            performSegueWithIdentifier("GoToQuestionPicker", sender: nil)
+        
+        }
+        }
     
   //  func formattedPrice() -> String {
  //       return "$\(price)"
@@ -48,6 +102,9 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
         
         //var enteredByUser =
         
+      //  let prospectiveText = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: "")
+        
+        
        
         
         let enteredByUserN = textField.text!
@@ -60,6 +117,7 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
             print("invalid")
             
            textField.text = enteredByUserN
+           
         }
         
      //

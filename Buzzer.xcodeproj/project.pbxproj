@@ -13,6 +13,7 @@
 		456DFC6A1CEABC8500C865A0 /* Question.json in Resources */ = {isa = PBXBuildFile; fileRef = 456DFC691CEABC8500C865A0 /* Question.json */; };
 		45C7FB551CE1739C00A5FCB7 /* PlayInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7FB541CE1739C00A5FCB7 /* PlayInputViewController.swift */; };
 		45C7FB571CE1782700A5FCB7 /* QuestionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7FB561CE1782700A5FCB7 /* QuestionPickerViewController.swift */; };
+		45DBCD671CF37CD200EF55D2 /* Jeopardy-theme-song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 45DBCD661CF37CD200EF55D2 /* Jeopardy-theme-song.mp3 */; };
 		45E69A841CDAE51E00D7D282 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E69A831CDAE51E00D7D282 /* Game.swift */; };
 		45E69A861CDAE59100D7D282 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E69A851CDAE59100D7D282 /* Player.swift */; };
 		45E69A881CDAE5A700D7D282 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E69A871CDAE5A700D7D282 /* Question.swift */; };
@@ -51,6 +52,7 @@
 		456DFC691CEABC8500C865A0 /* Question.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question.json; path = Json/Question.json; sourceTree = "<group>"; };
 		45C7FB541CE1739C00A5FCB7 /* PlayInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayInputViewController.swift; sourceTree = "<group>"; };
 		45C7FB561CE1782700A5FCB7 /* QuestionPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPickerViewController.swift; sourceTree = "<group>"; };
+		45DBCD661CF37CD200EF55D2 /* Jeopardy-theme-song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Jeopardy-theme-song.mp3"; path = "../../../../Downloads/Jeopardy-theme-song/Jeopardy-theme-song.mp3"; sourceTree = "<group>"; };
 		45E69A831CDAE51E00D7D282 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		45E69A851CDAE59100D7D282 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		45E69A871CDAE5A700D7D282 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				45E69A821CDAE47800D7D282 /* View */,
 				45FD368F1CDAD677000163A0 /* AppDelegate.swift */,
 				45FD36931CDAD677000163A0 /* Main.storyboard */,
+				45DBCD661CF37CD200EF55D2 /* Jeopardy-theme-song.mp3 */,
 				45FD36991CDAD677000163A0 /* Assets.xcassets */,
 				45FD369B1CDAD677000163A0 /* LaunchScreen.storyboard */,
 				45FD369E1CDAD677000163A0 /* Info.plist */,
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				456DFC681CEABC7D00C865A0 /* Category.json in Resources */,
+				45DBCD671CF37CD200EF55D2 /* Jeopardy-theme-song.mp3 in Resources */,
 				45FD369D1CDAD677000163A0 /* LaunchScreen.storyboard in Resources */,
 				45FD369A1CDAD677000163A0 /* Assets.xcassets in Resources */,
 				456DFC6A1CEABC8500C865A0 /* Question.json in Resources */,

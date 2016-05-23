@@ -53,16 +53,35 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yTl-jF-zKg">
+                                <rect key="frame" x="515" y="549" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchToggle:" destination="Ehj-i3-4Fg" eventType="valueChanged" id="u7r-Y9-leR"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGr-GD-kDz">
+                                <rect key="frame" x="447" y="554" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.65217752659574468" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="x7g-od-ELB" firstAttribute="top" secondItem="J5k-Ck-kxr" secondAttribute="bottom" constant="44" id="DoB-rE-A9c"/>
+                            <constraint firstItem="ABq-2l-TNE" firstAttribute="top" secondItem="yTl-jF-zKg" secondAttribute="bottom" constant="20" id="HkD-ec-IAc"/>
                             <constraint firstItem="J5k-Ck-kxr" firstAttribute="top" secondItem="943-F3-YA7" secondAttribute="bottom" constant="157" id="KYv-us-MLf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yTl-jF-zKg" secondAttribute="trailing" constant="16" id="NTJ-Qa-2ty"/>
                             <constraint firstItem="J5k-Ck-kxr" firstAttribute="centerX" secondItem="epR-6H-g9x" secondAttribute="centerX" constant="-8.5" id="Yx3-6V-RJ7"/>
+                            <constraint firstItem="yTl-jF-zKg" firstAttribute="leading" secondItem="yGr-GD-kDz" secondAttribute="trailing" constant="18" id="dQu-bQ-PsE"/>
+                            <constraint firstItem="ABq-2l-TNE" firstAttribute="top" secondItem="yGr-GD-kDz" secondAttribute="bottom" constant="25" id="lLs-Pi-vWR"/>
                             <constraint firstItem="x7g-od-ELB" firstAttribute="centerX" secondItem="J5k-Ck-kxr" secondAttribute="centerX" constant="-0.5" id="wuy-hS-FER"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EFv-Ak-S5a"/>
+                    <connections>
+                        <outlet property="soundSwitch" destination="yTl-jF-zKg" id="pAa-s1-Yp7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJk-5a-GxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,8 +254,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXR-yN-UIf">
-                                <rect key="frame" x="274" y="298" width="36" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXR-yN-UIf">
+                                <rect key="frame" x="274" y="298" width="37" height="30"/>
                                 <state key="normal" title="PLAY">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 </state>
@@ -267,6 +286,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playButton" destination="eXR-yN-UIf" id="8fG-TW-YSg"/>
                         <outlet property="player1Name" destination="i5p-cO-Acc" id="LSp-mS-hxl"/>
                         <outlet property="player2Name" destination="QnV-xw-qQO" id="i1A-gx-P2A"/>
                         <outlet property="player3Name" destination="dRg-dK-dpa" id="X9C-8S-3Tb"/>

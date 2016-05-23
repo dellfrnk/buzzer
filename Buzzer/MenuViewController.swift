@@ -7,11 +7,53 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MenuViewController: UIViewController {
+    
+    var audioPlayer: AVAudioPlayer = AVAudioPlayer()
+    
+    
+    
+    
+    @IBOutlet weak var soundSwitch: UISwitch!
+    
 
+    @IBAction func soundSwitchToggle(sender: AnyObject) {
+        
+        playJeopardy()
+       
+        
+    }
+    
+    func playJeopardy() {
+        let audioPath = NSBundle.mainBundle().pathForResource("Jeopardy-theme-song", ofType: "mp3")!
+        
+        
+        do {
+            //  let audioPlayer = try AVAudioPlayer(contentsOfURL:coinSound)
+            
+            try audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath))
+            
+            // audioPlayer.prepareToPlay()
+            if soundSwitch.on {
+                audioPlayer.play()
+            }
+            else
+            {
+                audioPlayer.stop()
+            }
+            
+        }catch {
+            print("Error getting the audio file")
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        playJeopardy()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -23,6 +65,7 @@ class MenuViewController: UIViewController {
 
     @IBAction func playGame(sender: AnyObject) {
         print("Hello")
+        audioPlayer.stop()
     }
 }
 
