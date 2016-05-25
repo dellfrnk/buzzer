@@ -31,11 +31,9 @@ class MenuViewController: UIViewController {
         
         
         do {
-            //  let audioPlayer = try AVAudioPlayer(contentsOfURL:coinSound)
             
             try audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath))
-            
-            // audioPlayer.prepareToPlay()
+
             if soundSwitch.on {
                 audioPlayer.play()
             }
@@ -44,7 +42,7 @@ class MenuViewController: UIViewController {
                 audioPlayer.stop()
             }
             
-        }catch {
+        } catch {
             print("Error getting the audio file")
         }
     }

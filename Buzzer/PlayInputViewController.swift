@@ -90,22 +90,10 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
  //   }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-    //    print(textField1.text)
+
         print("While entering the characters this method gets called")
         
-        //let validTimeCharacterSet = NSCharacterSet(charactersInString: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
         
-   
-       // NSLog(textField1.text!)
-        //var lastch = textField1.text!.characters.last!
-        //let rangeofChars = textField1.text!.rangeOfCharacterFromSet(letters.invertedSet)
-        
-        //var enteredByUser =
-        
-      //  let prospectiveText = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: "")
-        
-        
-       
         
         let enteredByUserN = textField.text!
             .componentsSeparatedByCharactersInSet(unsafeChars)
@@ -167,11 +155,8 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
                 game.player1 = player1
                 game.player2 = player2
                 game.player3 = player3
-                //game.loadCategoriesForNewGame()
-               // game.loadCategoriesForNewGame(<#T##numberOfCategories: Int##Int#>, responseActionHandler: { (error) in
-                    //code
-                    
-                    game.loadCategoriesForNewGame(numberOfCategories, responseActionHandler: { (error) -> () in
+                
+                game.loadCategoriesForNewGame(numberOfCategories, responseActionHandler: { (error) -> () in
                         
                         if error == nil {
                             // TODO: Load UI
