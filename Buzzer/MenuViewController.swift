@@ -15,6 +15,7 @@ class MenuViewController: UIViewController {
     
     
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var soundSwitch: UISwitch!
     
@@ -47,9 +48,14 @@ class MenuViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        print("Did Appear")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         playJeopardy()
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -62,7 +68,15 @@ class MenuViewController: UIViewController {
 
 
     @IBAction func playGame(sender: AnyObject) {
-        print("Hello")
+        //print("Hello")
+        activityIndicator.startAnimating()
+        
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(5 * Double(NSEC_PER_SEC)))
+        
+        dispatch_after(time, dispatch_get_main_queue())
+        {
+            self.activityIndicator.stopAnimating()
+        }
         audioPlayer.stop()
     }
 }

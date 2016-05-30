@@ -100,7 +100,7 @@ class QuestionPickerViewController: UIViewController, UITextFieldDelegate, UICol
         if let category = game?.categories[selectedCategory] {
             do {
                 //let question = try Question.loadQuestion(category, price: selectedPrice)
-                 try  Question.loadQuestion(category, price: selectedPrice, responseHandler: { (error, question) -> () in
+                 try  Question.loadQuestion(category, price: selectedPrice, responseHandler: { (error, question) -> () in   
                     
                     if error == nil {
                         
