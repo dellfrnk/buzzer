@@ -49,7 +49,8 @@ class MenuViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        print("Did Appear")
+       // print("Did Appear")
+        playJeopardy()
     }
     
     override func viewDidLoad() {

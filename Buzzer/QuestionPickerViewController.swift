@@ -98,31 +98,27 @@ class QuestionPickerViewController: UIViewController, UITextFieldDelegate, UICol
         
         // Set the selected question on game object
         if let category = game?.categories[selectedCategory] {
-            do {
-                //let question = try Question.loadQuestion(category, price: selectedPrice)
-                 try  Question.loadQuestion(category, price: selectedPrice, responseHandler: { (error, question) -> () in   
-                    
-                    if error == nil {
-                        
-                        self.game?.currentQuestion = question
-                        
-                        dispatch_async(dispatch_get_main_queue(),{
-                            self.performSegueWithIdentifier("ShowQuestionBuzzSegue", sender: nil)
-                        })
-                        
-                    } else {
-                        print("Error trying to load question: \(error)")
-                    }
-                    
-                })
+            //if there is already an answered question for this category and price don't do anything
+            
+            if category.answeredQuestions[selectedPrice] != nil {
+                return
+            }
+            
+            Question.loadQuestion(category, price: selectedPrice, responseHandler: { (error, question) -> () in
                 
-               // game?.currentQuestion = question
-               // self.performSegueWithIdentifier("ShowQuestionBuzzSegue", sender: nil)
-            }
-            catch let error {
-                print("Error trying to load question: \(error)")
-            }
-        }
+                if error == nil {
+                    
+                    self.game?.currentQuestion = question
+                    
+                    dispatch_async(dispatch_get_main_queue(),{
+                        self.performSegueWithIdentifier("ShowQuestionBuzzSegue", sender: nil)
+                    })
+                    
+                } else {
+                    print("Error trying to load question: \(error)")
+                }
+                
+            })        }
     }
 
     

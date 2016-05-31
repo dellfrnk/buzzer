@@ -68,6 +68,9 @@ class Category {
         let request = NSURLRequest(URL: url!)
         
         //asynchronous
+        //closure
+        //public func dataTaskWithRequest(request: NSURLRequest, completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void) -> NSURLSessionDataTask
+        
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
             (data, response, requestError) -> Void in
             //NSData, URLResponse,

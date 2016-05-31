@@ -134,22 +134,66 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
     }
 
     
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "ShowQuestionBuzzSegue" {
+//            if let destinationViewController = segue.destinationViewController as? QuestionBuzzViewController {
+//                destinationViewController.game = game
+//            }
+//        }
+//    }
+        
+//        if segue.identifier == "ShowQuestionBuzzSegue" {
+//            if let destinationViewController = segue.destinationViewController as? QuestionBuzzViewController {
+//                destinationViewController.game = game
+//            }
+//        }
+//    }
+    
+    
+       // if segue.identifier == "ShowQuestionBuzzSegue" {
         if segue.identifier == "GoToQuestionPicker" {
             
             if let destinationViewController =  segue.destinationViewController as? QuestionPickerViewController {
                 
                 let player1 = Player()
                 // if nil put the double quotes
-                player1.name = player1Name.text ?? ""
+                
+               //player1.name = player1Name.text!
+                if let enteredName = player1Name.text where enteredName.characters.count > 0
+                {       player1.name = enteredName
+                }
+                else
+                {
+                    player1.name = "Player 1"
+                }
+                //other way - same meaning
+                //player1.name = playerName.text ?? "Player 1"
+                
                 
                 let player2 = Player()
-                // if nil put the double quotes
-                player2.name = player2Name.text ?? ""
+                if let enteredName = player2Name.text where enteredName.characters.count > 0 {
+                    player2.name = enteredName
+                }
+                else {
+                    player2.name = "Player 2"
+                }
                 
                 let player3 = Player()
-                // if nil put the double quotes
-                player3.name = player3Name.text ?? ""
+                if let enteredName = player3Name.text where enteredName.characters.count > 0 {
+                    player3.name = enteredName
+                }
+                else {
+                    player3.name = "Player 3"
+                }
+            
+//                let player2 = Player()
+//                // if nil put the double quotes
+//                player2.name = player2Name.text ?? ""
+//                
+//                let player3 = Player()
+//                // if nil put the double quotes
+//                player3.name = player3Name.text ?? ""
                 
                 let game = Game()
                 game.player1 = player1
@@ -166,6 +210,8 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
                         
     
                 })
+                
+                game.currentPlayer = player1
                 
                 //
                 
