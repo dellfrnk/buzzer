@@ -11,6 +11,7 @@
 		4526681F1CE4074800A8DF62 /* QuestionPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */; };
 		4544D0071CFFC91500E5EE17 /* HighScore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544D0051CFFC91500E5EE17 /* HighScore+CoreDataProperties.swift */; };
 		4544D0081CFFC91500E5EE17 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544D0061CFFC91500E5EE17 /* HighScore.swift */; };
+		4544D00B1CFFD36000E5EE17 /* AnswerVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544D00A1CFFD36000E5EE17 /* AnswerVerificationViewController.swift */; };
 		456DFC681CEABC7D00C865A0 /* Category.json in Resources */ = {isa = PBXBuildFile; fileRef = 456DFC671CEABC7D00C865A0 /* Category.json */; };
 		456DFC6A1CEABC8500C865A0 /* Question.json in Resources */ = {isa = PBXBuildFile; fileRef = 456DFC691CEABC8500C865A0 /* Question.json */; };
 		4585612A1CFD26920021D914 /* AnswerInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458561291CFD26920021D914 /* AnswerInputViewController.swift */; };
@@ -53,6 +54,7 @@
 		4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPriceCell.swift; sourceTree = "<group>"; };
 		4544D0051CFFC91500E5EE17 /* HighScore+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HighScore+CoreDataProperties.swift"; path = "../HighScore+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4544D0061CFFC91500E5EE17 /* HighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HighScore.swift; path = ../HighScore.swift; sourceTree = "<group>"; };
+		4544D00A1CFFD36000E5EE17 /* AnswerVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerVerificationViewController.swift; sourceTree = "<group>"; };
 		456DFC671CEABC7D00C865A0 /* Category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Category.json; path = Json/Category.json; sourceTree = "<group>"; };
 		456DFC691CEABC8500C865A0 /* Question.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Question.json; path = Json/Question.json; sourceTree = "<group>"; };
 		458561291CFD26920021D914 /* AnswerInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerInputViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				45C7FB561CE1782700A5FCB7 /* QuestionPickerViewController.swift */,
 				451F69E41CED4CFC00CEC3C4 /* QuestionBuzzViewController.swift */,
 				458561291CFD26920021D914 /* AnswerInputViewController.swift */,
+				4544D00A1CFFD36000E5EE17 /* AnswerVerificationViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				45FD36981CDAD677000163A0 /* Buzzer.xcdatamodeld in Sources */,
 				45FD36921CDAD677000163A0 /* MenuViewController.swift in Sources */,
 				4526681F1CE4074800A8DF62 /* QuestionPriceCell.swift in Sources */,
+				4544D00B1CFFD36000E5EE17 /* AnswerVerificationViewController.swift in Sources */,
 				45FD36901CDAD677000163A0 /* AppDelegate.swift in Sources */,
 				4585612A1CFD26920021D914 /* AnswerInputViewController.swift in Sources */,
 				45E69A8A1CDAE5B900D7D282 /* Category.swift in Sources */,

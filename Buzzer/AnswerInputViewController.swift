@@ -45,6 +45,9 @@ class AnswerInputViewController: UIViewController {
         questionTextView.text = game?.currentQuestion?.question
         }
     
+    @IBAction func checkAnswer(sender: AnyObject) {
+        
+    }
     /*
     // MARK: - Navigation
 
