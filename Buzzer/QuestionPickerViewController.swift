@@ -158,7 +158,7 @@ class QuestionPickerViewController: UIViewController, UITextFieldDelegate, UICol
         }
         
     //     Return UICollectionViewFloatLayout default size
-        return CGSize(width: 50, height: 50)
+        return CGSize(width: 20, height: 20)
     }
     
     //

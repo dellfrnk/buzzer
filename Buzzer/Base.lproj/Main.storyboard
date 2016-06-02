@@ -409,62 +409,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SDG-M1-0JP">
-                                <rect key="frame" x="16" y="95" width="343" height="366"/>
-                                <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eWB-HJ-lNb">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="366"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="150" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eWB-HJ-lNb">
+                                <rect key="frame" x="16" y="82" width="343" height="554"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="366" id="UUz-2s-bP5"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4vE-yp-lZ2">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="QuestionPrice" id="SV9-dr-Sc1" customClass="QuestionPriceCell" customModule="Buzzer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jt-SB-otn">
+                                                    <rect key="frame" x="10" y="15" width="31" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.62530474290780147" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="366" id="UUz-2s-bP5"/>
+                                            <constraint firstItem="6Jt-SB-otn" firstAttribute="centerY" secondItem="SV9-dr-Sc1" secondAttribute="centerY" id="0g2-0c-bZz"/>
+                                            <constraint firstItem="6Jt-SB-otn" firstAttribute="centerX" secondItem="SV9-dr-Sc1" secondAttribute="centerX" id="t4y-Ao-Vyp"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4vE-yp-lZ2">
-                                            <size key="itemSize" width="57" height="60"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="QuestionPrice" id="SV9-dr-Sc1" customClass="QuestionPriceCell" customModule="Buzzer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="64" width="57" height="60"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="60"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jt-SB-otn">
-                                                            <rect key="frame" x="13" y="19" width="31" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.62530474290780147" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstItem="6Jt-SB-otn" firstAttribute="centerY" secondItem="SV9-dr-Sc1" secondAttribute="centerY" id="0g2-0c-bZz"/>
-                                                    <constraint firstItem="6Jt-SB-otn" firstAttribute="centerX" secondItem="SV9-dr-Sc1" secondAttribute="centerX" id="t4y-Ao-Vyp"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="priceLabel" destination="6Jt-SB-otn" id="FHA-Dz-cdt"/>
-                                                </connections>
-                                            </collectionViewCell>
-                                        </cells>
                                         <connections>
-                                            <outlet property="dataSource" destination="O1Q-Wy-FbV" id="KuU-n0-fga"/>
-                                            <outlet property="delegate" destination="O1Q-Wy-FbV" id="lHF-3E-hJv"/>
+                                            <outlet property="priceLabel" destination="6Jt-SB-otn" id="FHA-Dz-cdt"/>
                                         </connections>
-                                    </collectionView>
-                                </subviews>
-                            </stackView>
+                                    </collectionViewCell>
+                                </cells>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UUz-2s-bP5"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="O1Q-Wy-FbV" id="KuU-n0-fga"/>
+                                    <outlet property="delegate" destination="O1Q-Wy-FbV" id="lHF-3E-hJv"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="SDG-M1-0JP" firstAttribute="leading" secondItem="CsC-Ln-jsX" secondAttribute="leadingMargin" id="E5K-Wj-i01"/>
-                            <constraint firstItem="SDG-M1-0JP" firstAttribute="trailing" secondItem="CsC-Ln-jsX" secondAttribute="trailingMargin" id="Rgc-Lb-xkc"/>
-                            <constraint firstItem="SDG-M1-0JP" firstAttribute="top" secondItem="xvL-x6-VdG" secondAttribute="bottom" constant="31" id="U0W-pl-Thd"/>
+                            <constraint firstItem="eWB-HJ-lNb" firstAttribute="trailing" secondItem="CsC-Ln-jsX" secondAttribute="trailingMargin" id="1rZ-Kh-4iR"/>
+                            <constraint firstItem="aBJ-cs-eBF" firstAttribute="top" secondItem="eWB-HJ-lNb" secondAttribute="bottom" constant="50" id="7YE-ZN-DfF"/>
+                            <constraint firstItem="eWB-HJ-lNb" firstAttribute="top" secondItem="xvL-x6-VdG" secondAttribute="bottom" constant="18" id="PJO-ho-YFT"/>
+                            <constraint firstItem="aBJ-cs-eBF" firstAttribute="top" secondItem="eWB-HJ-lNb" secondAttribute="bottom" constant="50" id="WMi-6s-SgP"/>
+                            <constraint firstItem="eWB-HJ-lNb" firstAttribute="top" secondItem="xvL-x6-VdG" secondAttribute="bottom" constant="87" id="ZJR-sq-vz0"/>
+                            <constraint firstItem="eWB-HJ-lNb" firstAttribute="top" secondItem="xvL-x6-VdG" secondAttribute="bottom" constant="18" id="dU4-7e-5lY"/>
+                            <constraint firstItem="aBJ-cs-eBF" firstAttribute="top" secondItem="eWB-HJ-lNb" secondAttribute="bottom" constant="31" id="rei-fD-Ryy"/>
+                            <constraint firstItem="eWB-HJ-lNb" firstAttribute="leading" secondItem="CsC-Ln-jsX" secondAttribute="leadingMargin" id="wDM-5e-Wk7"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZJR-sq-vz0"/>
+                                <exclude reference="dU4-7e-5lY"/>
+                                <exclude reference="7YE-ZN-DfF"/>
+                                <exclude reference="WMi-6s-SgP"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="questionCollectionView" destination="eWB-HJ-lNb" id="2CE-vA-kkr"/>
