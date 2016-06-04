@@ -36,6 +36,26 @@ class MenuViewController: UIViewController {
         
     }
     
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        
+        if event?.subtype == UIEventSubtype.MotionShake {
+            
+            print("Device was shaken")
+            if soundSwitch.on
+            {
+                soundSwitch.setOn(false, animated:true)
+            }
+            else{
+                soundSwitch.setOn(true, animated:true)
+                
+            }
+            playJeopardy()
+
+            
+        }
+        
+    }
+    
     func playJeopardy() {
         let audioPath = NSBundle.mainBundle().pathForResource("Jeopardy-theme-song", ofType: "mp3")!
         
