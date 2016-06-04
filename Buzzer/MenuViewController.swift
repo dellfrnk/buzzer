@@ -22,6 +22,15 @@ class MenuViewController: UIViewController {
 
     @IBAction func soundSwitchToggle(sender: AnyObject) {
         
+        
+        if soundSwitch.on
+        {
+            soundSwitch.setOn(true, animated:true)
+        }
+        else{
+            soundSwitch.setOn(false, animated:true)
+            
+        }
         playJeopardy()
        
         
@@ -35,13 +44,22 @@ class MenuViewController: UIViewController {
             
             try audioPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: audioPath))
 
+           
+           // {
+           //     soundSw
+           // }
             if soundSwitch.on {
                 audioPlayer.play()
+                NSUserDefaults.standardUserDefaults().setObject("ON", forKey: "JeopardySoundFlag")
             }
             else
             {
                 audioPlayer.stop()
+                NSUserDefaults.standardUserDefaults().setObject("OFF", forKey: "JeopardySoundFlag")
             }
+            
+            
+
             
         } catch {
             print("Error getting the audio file")
@@ -56,6 +74,23 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let soundOn  = NSUserDefaults.standardUserDefaults().objectForKey("JeopardySoundFlag") as? String
+      
+        if soundOn == "ON"        {
+            soundSwitch.setOn(true, animated:true)
+        }
+        else {
+            soundSwitch.setOn(false, animated:true)
+            
+        }
+        
+      
+        
+//       if let soundFlag     = NSUserDefaults.standardUserDefaults().objectForKey("JeopardySoundFlag") as? String
+//       {
+//         print(soundFlag)
+//        }
+//        
 
         playJeopardy()
         
@@ -79,6 +114,7 @@ class MenuViewController: UIViewController {
             self.activityIndicator.stopAnimating()
         }
         audioPlayer.stop()
+       //NSUserDefaults.standardUserDefaults().setObject("OFF", forKey: "JeopardySoundFlag")
     }
 }
 
