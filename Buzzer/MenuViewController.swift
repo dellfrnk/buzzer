@@ -93,8 +93,20 @@ class MenuViewController: UIViewController {
         playJeopardy()
     }
     
-    func swiped()
+    func swiped(gesture: UIGestureRecognizer)
     {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            switch swipeGesture.direction {
+                
+            case UISwipeGestureRecognizerDirection.Left:
+                print("User swiped Left")
+                self.performSegueWithIdentifier("playMenuIdentifier", sender: self)
+            default:
+                break
+            }
+
+        }
         print("swiped")
     }
     
@@ -113,6 +125,7 @@ class MenuViewController: UIViewController {
         
 
         playJeopardy()
+        print("ViewDidLoad")
         
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(MenuViewController.swiped))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left

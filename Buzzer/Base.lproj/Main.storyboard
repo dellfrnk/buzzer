@@ -34,16 +34,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5k-Ck-kxr">
-                                <rect key="frame" x="143" y="221" width="73" height="30"/>
-                                <state key="normal" title="Play Game">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="playGame:" destination="Ehj-i3-4Fg" eventType="touchUpInside" id="GrG-h0-Azb"/>
-                                    <segue destination="W3V-dH-2UU" kind="show" id="4rb-t8-P6x"/>
-                                </connections>
-                            </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yTl-jF-zKg">
                                 <rect key="frame" x="285" y="570" width="51" height="31"/>
                                 <connections>
@@ -67,6 +57,16 @@
                                 <state key="normal" title="High Scores">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5k-Ck-kxr">
+                                <rect key="frame" x="143" y="221" width="73" height="30"/>
+                                <state key="normal" title="Play Game">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playGame:" destination="Ehj-i3-4Fg" eventType="touchUpInside" id="GrG-h0-Azb"/>
+                                    <segue destination="W3V-dH-2UU" kind="show" identifier="playMenuIdentifier" id="4rb-t8-P6x"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="0.65217752659574468" colorSpace="calibratedRGB"/>
