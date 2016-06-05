@@ -36,6 +36,8 @@ class MenuViewController: UIViewController {
         
     }
     
+    
+    
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         
         if event?.subtype == UIEventSubtype.MotionShake {
@@ -91,6 +93,11 @@ class MenuViewController: UIViewController {
         playJeopardy()
     }
     
+    func swiped()
+    {
+        print("swiped")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -104,15 +111,12 @@ class MenuViewController: UIViewController {
             
         }
         
-      
-        
-//       if let soundFlag     = NSUserDefaults.standardUserDefaults().objectForKey("JeopardySoundFlag") as? String
-//       {
-//         print(soundFlag)
-//        }
-//        
 
         playJeopardy()
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(MenuViewController.swiped))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeLeft)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
