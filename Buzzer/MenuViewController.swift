@@ -113,6 +113,10 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       //  let imgPath = NSBundle.mainBundle().pathForResource("Jeopardy", ofType: "dataset")!
+        
+       // self.view.backgroundColor = UIColor(patternImage: UIImage(named: imgPath)!)
+        
         let soundOn  = NSUserDefaults.standardUserDefaults().objectForKey("JeopardySoundFlag") as? String
       
         if soundOn == "ON"        {
