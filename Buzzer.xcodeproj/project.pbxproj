@@ -18,6 +18,7 @@
 		45C7FB551CE1739C00A5FCB7 /* PlayInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7FB541CE1739C00A5FCB7 /* PlayInputViewController.swift */; };
 		45C7FB571CE1782700A5FCB7 /* QuestionPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C7FB561CE1782700A5FCB7 /* QuestionPickerViewController.swift */; };
 		45DBCD671CF37CD200EF55D2 /* Jeopardy-theme-song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 45DBCD661CF37CD200EF55D2 /* Jeopardy-theme-song.mp3 */; };
+		45E235601D090C66000BE4DE /* HighScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2355F1D090C66000BE4DE /* HighScoresTableViewController.swift */; };
 		45E69A841CDAE51E00D7D282 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E69A831CDAE51E00D7D282 /* Game.swift */; };
 		45E69A861CDAE59100D7D282 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E69A851CDAE59100D7D282 /* Player.swift */; };
 		45E69A881CDAE5A700D7D282 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E69A871CDAE5A700D7D282 /* Question.swift */; };
@@ -61,6 +62,7 @@
 		45C7FB541CE1739C00A5FCB7 /* PlayInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayInputViewController.swift; sourceTree = "<group>"; };
 		45C7FB561CE1782700A5FCB7 /* QuestionPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPickerViewController.swift; sourceTree = "<group>"; };
 		45DBCD661CF37CD200EF55D2 /* Jeopardy-theme-song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Jeopardy-theme-song.mp3"; path = "../../../../Downloads/Jeopardy-theme-song/Jeopardy-theme-song.mp3"; sourceTree = "<group>"; };
+		45E2355F1D090C66000BE4DE /* HighScoresTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoresTableViewController.swift; sourceTree = "<group>"; };
 		45E69A831CDAE51E00D7D282 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		45E69A851CDAE59100D7D282 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		45E69A871CDAE5A700D7D282 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				451F69E41CED4CFC00CEC3C4 /* QuestionBuzzViewController.swift */,
 				458561291CFD26920021D914 /* AnswerInputViewController.swift */,
 				4544D00A1CFFD36000E5EE17 /* AnswerVerificationViewController.swift */,
+				45E2355F1D090C66000BE4DE /* HighScoresTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				45FD36981CDAD677000163A0 /* Buzzer.xcdatamodeld in Sources */,
 				45FD36921CDAD677000163A0 /* MenuViewController.swift in Sources */,
 				4526681F1CE4074800A8DF62 /* QuestionPriceCell.swift in Sources */,
+				45E235601D090C66000BE4DE /* HighScoresTableViewController.swift in Sources */,
 				4544D00B1CFFD36000E5EE17 /* AnswerVerificationViewController.swift in Sources */,
 				45FD36901CDAD677000163A0 /* AppDelegate.swift in Sources */,
 				4585612A1CFD26920021D914 /* AnswerInputViewController.swift in Sources */,

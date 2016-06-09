@@ -534,6 +534,60 @@
             </objects>
             <point key="canvasLocation" x="1010.5" y="752.5"/>
         </scene>
+        <!--High Scores Table View Controller-->
+        <scene sceneID="6ut-yP-QSP">
+            <objects>
+                <tableViewController id="Nyo-yJ-9K5" customClass="HighScoresTableViewController" customModule="Buzzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uAh-0J-V0Q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wLf-8F-DyV">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wLf-8F-DyV" id="9ro-iS-Jjw">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejN-xp-UZx">
+                                            <rect key="frame" x="481" y="11" width="96" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWg-CO-WPc">
+                                            <rect key="frame" x="23" y="14" width="97" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rWg-CO-WPc" firstAttribute="leading" secondItem="9ro-iS-Jjw" secondAttribute="leadingMargin" constant="-55" id="Ib9-OG-E2g"/>
+                                        <constraint firstItem="ejN-xp-UZx" firstAttribute="centerY" secondItem="9ro-iS-Jjw" secondAttribute="centerY" id="LG7-Mo-asR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ejN-xp-UZx" secondAttribute="trailing" constant="15" id="W1s-dV-hlg"/>
+                                        <constraint firstItem="rWg-CO-WPc" firstAttribute="leading" secondItem="9ro-iS-Jjw" secondAttribute="leadingMargin" constant="15" id="lYo-Bn-vEj"/>
+                                        <constraint firstItem="rWg-CO-WPc" firstAttribute="bottom" secondItem="9ro-iS-Jjw" secondAttribute="bottomMargin" id="uTB-v0-uL6"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Ib9-OG-E2g"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Nyo-yJ-9K5" id="E3c-ye-y9A"/>
+                            <outlet property="delegate" destination="Nyo-yJ-9K5" id="M8D-gB-xxK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAW-xI-GiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-45" y="2247"/>
+        </scene>
         <!--Answer Verification View Controller-->
         <scene sceneID="eM4-kZ-QJv">
             <objects>
