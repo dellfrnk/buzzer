@@ -134,13 +134,16 @@ class MenuViewController: UIViewController {
             case UISwipeGestureRecognizerDirection.Left:
                 print("User swiped Left")
               //  swipedLeft = true
+                self.performSegueWithIdentifier("playMenuIdentifier", sender: self)
+           // }
+                //self.performSegueWithIdentifier("playMenuIdentifier")
                 
             case UISwipeGestureRecognizerDirection.Right:
                 print("User swiped Right")
                 
                 
                 //self.dismissViewControllerAnimated(true, completion: {});
-            //  self.navigationController?.popViewControllerAnimated(true);
+            //self.navigationController?.popViewControllerAnimated(true);
             default:
                 break
             }
