@@ -93,22 +93,7 @@ class MenuViewController: UIViewController {
         playJeopardy()
     }
     
-    func swiped(gesture: UIGestureRecognizer)
-    {
-        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-            
-            switch swipeGesture.direction {
-                
-            case UISwipeGestureRecognizerDirection.Left:
-                print("User swiped Left")
-                self.performSegueWithIdentifier("playMenuIdentifier", sender: self)
-            default:
-                break
-            }
-
-        }
-        print("swiped")
-    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,11 +116,38 @@ class MenuViewController: UIViewController {
         playJeopardy()
         print("ViewDidLoad")
         
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(MenuViewController.swiped))
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(swipeLeft)
         
+        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    
+    func swiped(gesture: UIGestureRecognizer)
+    {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            switch swipeGesture.direction {
+                
+            case UISwipeGestureRecognizerDirection.Left:
+                print("User swiped Left")
+              //  swipedLeft = true
+                
+            case UISwipeGestureRecognizerDirection.Right:
+                print("User swiped Right")
+                
+                
+                //self.dismissViewControllerAnimated(true, completion: {});
+            //  self.navigationController?.popViewControllerAnimated(true);
+            default:
+                break
+            }
+            
+        }
+        print("swiped")
+        // print(Helper.x)
     }
 
     override func didReceiveMemoryWarning() {

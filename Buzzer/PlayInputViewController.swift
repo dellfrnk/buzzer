@@ -27,7 +27,33 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
                                    animations: {
                                     self.playButton.transform = CGAffineTransformIdentity
             }, completion: nil)
-        
+     
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swiped(_:)))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRight)
+
+    }
+    
+    func swiped(gesture: UIGestureRecognizer)
+    {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            switch swipeGesture.direction {
+                
+            case UISwipeGestureRecognizerDirection.Left:
+                print("User swiped Left")
+                //self.performSegueWithIdentifier("playMenuIdentifier", sender: self)
+            case UISwipeGestureRecognizerDirection.Right:
+                print("User swiped Right")
+                
+                //self.dismissViewControllerAnimated(true, completion: {});
+                self.navigationController?.popViewControllerAnimated(true);
+            default:
+                break
+            }
+            
+        }
+        print("swiped")
     }
     
     let unsafeChars = NSCharacterSet.alphanumericCharacterSet().invertedSet

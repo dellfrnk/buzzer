@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		451F69E51CED4CFC00CEC3C4 /* QuestionBuzzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F69E41CED4CFC00CEC3C4 /* QuestionBuzzViewController.swift */; };
 		4526681F1CE4074800A8DF62 /* QuestionPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */; };
+		452ED5831D0DFFFD00083C3C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ED5821D0DFFFD00083C3C /* Helper.swift */; };
 		4544D0071CFFC91500E5EE17 /* HighScore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544D0051CFFC91500E5EE17 /* HighScore+CoreDataProperties.swift */; };
 		4544D0081CFFC91500E5EE17 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544D0061CFFC91500E5EE17 /* HighScore.swift */; };
 		4544D00B1CFFD36000E5EE17 /* AnswerVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544D00A1CFFD36000E5EE17 /* AnswerVerificationViewController.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		451F69E41CED4CFC00CEC3C4 /* QuestionBuzzViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionBuzzViewController.swift; sourceTree = "<group>"; };
 		4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPriceCell.swift; sourceTree = "<group>"; };
+		452ED5821D0DFFFD00083C3C /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		4544D0051CFFC91500E5EE17 /* HighScore+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HighScore+CoreDataProperties.swift"; path = "../HighScore+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4544D0061CFFC91500E5EE17 /* HighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HighScore.swift; path = ../HighScore.swift; sourceTree = "<group>"; };
 		4544D00A1CFFD36000E5EE17 /* AnswerVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerVerificationViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				458561291CFD26920021D914 /* AnswerInputViewController.swift */,
 				4544D00A1CFFD36000E5EE17 /* AnswerVerificationViewController.swift */,
 				45E2355F1D090C66000BE4DE /* HighScoresTableViewController.swift */,
+				452ED5821D0DFFFD00083C3C /* Helper.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				4544D00B1CFFD36000E5EE17 /* AnswerVerificationViewController.swift in Sources */,
 				45FD36901CDAD677000163A0 /* AppDelegate.swift in Sources */,
 				4585612A1CFD26920021D914 /* AnswerInputViewController.swift in Sources */,
+				452ED5831D0DFFFD00083C3C /* Helper.swift in Sources */,
 				45E69A8A1CDAE5B900D7D282 /* Category.swift in Sources */,
 				4544D0071CFFC91500E5EE17 /* HighScore+CoreDataProperties.swift in Sources */,
 				4544D0081CFFC91500E5EE17 /* HighScore.swift in Sources */,
