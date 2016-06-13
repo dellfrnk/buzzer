@@ -12,9 +12,9 @@ import UIKit
 class Helper
 {
    // static var x = 1
-    var swipedLeft : Bool = false
+    //static var swipedLeft : Bool = false
     
-    func swiped(gesture: UIGestureRecognizer)
+     func swiped(gesture: UIGestureRecognizer, controller: UIViewController)
     {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             
@@ -22,21 +22,26 @@ class Helper
                 
             case UISwipeGestureRecognizerDirection.Left:
                 print("User swiped Left")
-                swipedLeft = true
-               
+                //  swipedLeft = true
+                controller.performSegueWithIdentifier("playMenuIdentifier", sender: self)
+                // }
+                //self.performSegueWithIdentifier("playMenuIdentifier")
+                
             case UISwipeGestureRecognizerDirection.Right:
                 print("User swiped Right")
-            
+                
                 
                 //self.dismissViewControllerAnimated(true, completion: {});
-              //  self.navigationController?.popViewControllerAnimated(true);
+            //self.navigationController?.popViewControllerAnimated(true);
             default:
                 break
             }
             
         }
         print("swiped")
-       // print(Helper.x)
+        // print(Helper.x)
+
+        
     }
     
 }
