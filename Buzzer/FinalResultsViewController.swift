@@ -10,6 +10,8 @@ import UIKit
 
 class FinalResultsViewController: UIViewController {
 
+     var game: Game?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +33,15 @@ class FinalResultsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "FinalResultsSegue" {
+            if let destinationViewController = segue.destinationViewController as? AnswerVerificationViewController {
+                destinationViewController.game = game
+            }
+        }
+    }
 
 }

@@ -148,8 +148,7 @@
                                 <rect key="frame" x="162" y="514" width="51" height="30"/>
                                 <state key="normal" title="CHECK"/>
                                 <connections>
-                                    <action selector="checkAnswer:" destination="jKY-gv-rxF" eventType="touchUpInside" id="rRA-oE-bQ2"/>
-                                    <segue destination="R57-b4-lwI" kind="show" identifier="AnswerVerificationSegue" id="lDc-Yd-uH1"/>
+                                    <action selector="checkAnswer:" destination="jKY-gv-rxF" eventType="touchUpInside" id="Szv-aC-njE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUl-Zk-MsH">
@@ -201,11 +200,12 @@
                         <outlet property="categoryLabel" destination="xUl-Zk-MsH" id="IhJ-Eg-cBJ"/>
                         <outlet property="priceLabel" destination="Lia-i1-0xi" id="PB8-JF-POh"/>
                         <outlet property="questionTextView" destination="iMh-qU-vfZ" id="c3x-vX-BbF"/>
+                        <segue destination="R57-b4-lwI" kind="show" identifier="AnswerVerificationSegue" id="Qt7-kH-rfW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3lN-AH-xYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010.5" y="2305.5"/>
+            <point key="canvasLocation" x="935.5" y="2341.5"/>
         </scene>
         <!--Question Buzz View Controller-->
         <scene sceneID="vSR-TK-9cO">
@@ -726,6 +726,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtN-Kh-TnB">
                                 <rect key="frame" x="152" y="558" width="71" height="30"/>
                                 <state key="normal" title="End Game"/>
+                                <connections>
+                                    <action selector="EndGame:" destination="R57-b4-lwI" eventType="touchDragInside" id="3R8-eb-LnG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaM-kr-sXR">
                                 <rect key="frame" x="16" y="558" width="52" height="30"/>
