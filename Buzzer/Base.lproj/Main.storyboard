@@ -546,7 +546,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighScoreIdentifier" id="wLf-8F-DyV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighScoreIdentifier" id="wLf-8F-DyV" customClass="HighScoreTableViewCell" customModule="Buzzer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wLf-8F-DyV" id="9ro-iS-Jjw">
@@ -567,18 +567,16 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="rWg-CO-WPc" firstAttribute="leading" secondItem="9ro-iS-Jjw" secondAttribute="leadingMargin" constant="-55" id="Ib9-OG-E2g"/>
                                         <constraint firstItem="ejN-xp-UZx" firstAttribute="centerY" secondItem="9ro-iS-Jjw" secondAttribute="centerY" id="LG7-Mo-asR"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ejN-xp-UZx" secondAttribute="trailing" constant="15" id="W1s-dV-hlg"/>
                                         <constraint firstItem="rWg-CO-WPc" firstAttribute="leading" secondItem="9ro-iS-Jjw" secondAttribute="leadingMargin" constant="15" id="lYo-Bn-vEj"/>
                                         <constraint firstItem="rWg-CO-WPc" firstAttribute="bottom" secondItem="9ro-iS-Jjw" secondAttribute="bottomMargin" id="uTB-v0-uL6"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="Ib9-OG-E2g"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="PlayerName" destination="rWg-CO-WPc" id="T2L-H2-Fyy"/>
+                                    <outlet property="PlayerScore" destination="ejN-xp-UZx" id="KOU-am-dpv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -589,7 +587,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAW-xI-GiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="627"/>
+            <point key="canvasLocation" x="335.5" y="668.5"/>
         </scene>
         <!--Answer Verification View Controller-->
         <scene sceneID="eM4-kZ-QJv">
