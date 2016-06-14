@@ -1,17 +1,15 @@
 //
-//  AnswerVerificationViewController.swift
+//  FinalResultsViewController.swift
 //  Buzzer
 //
-//  Created by leafranco on 2016-06-01.
+//  Created by leafranco on 2016-06-13.
 //  Copyright © 2016 dfranco. All rights reserved.
 //
 
 import UIKit
 
-class AnswerVerificationViewController: UIViewController {
+class FinalResultsViewController: UIViewController {
 
-   var game: Game?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +22,7 @@ class AnswerVerificationViewController: UIViewController {
     }
     
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -32,6 +30,6 @@ class AnswerVerificationViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    
+    */
 
 }

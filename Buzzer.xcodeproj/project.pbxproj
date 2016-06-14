@@ -11,6 +11,7 @@
 		4526681F1CE4074800A8DF62 /* QuestionPriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */; };
 		452ED5831D0DFFFD00083C3C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ED5821D0DFFFD00083C3C /* Helper.swift */; };
 		452ED5851D0F888E00083C3C /* HighScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ED5841D0F888E00083C3C /* HighScoreTableViewCell.swift */; };
+		452ED5871D0F9BAB00083C3C /* FinalResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452ED5861D0F9BAB00083C3C /* FinalResultsViewController.swift */; };
 		4544D0071CFFC91500E5EE17 /* HighScore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544D0051CFFC91500E5EE17 /* HighScore+CoreDataProperties.swift */; };
 		4544D0081CFFC91500E5EE17 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544D0061CFFC91500E5EE17 /* HighScore.swift */; };
 		4544D00B1CFFD36000E5EE17 /* AnswerVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544D00A1CFFD36000E5EE17 /* AnswerVerificationViewController.swift */; };
@@ -57,6 +58,7 @@
 		4526681E1CE4074800A8DF62 /* QuestionPriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionPriceCell.swift; sourceTree = "<group>"; };
 		452ED5821D0DFFFD00083C3C /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		452ED5841D0F888E00083C3C /* HighScoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreTableViewCell.swift; sourceTree = "<group>"; };
+		452ED5861D0F9BAB00083C3C /* FinalResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalResultsViewController.swift; sourceTree = "<group>"; };
 		4544D0051CFFC91500E5EE17 /* HighScore+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HighScore+CoreDataProperties.swift"; path = "../HighScore+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4544D0061CFFC91500E5EE17 /* HighScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HighScore.swift; path = ../HighScore.swift; sourceTree = "<group>"; };
 		4544D00A1CFFD36000E5EE17 /* AnswerVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerVerificationViewController.swift; sourceTree = "<group>"; };
@@ -149,10 +151,11 @@
 				45C7FB541CE1739C00A5FCB7 /* PlayInputViewController.swift */,
 				45C7FB561CE1782700A5FCB7 /* QuestionPickerViewController.swift */,
 				451F69E41CED4CFC00CEC3C4 /* QuestionBuzzViewController.swift */,
-				458561291CFD26920021D914 /* AnswerInputViewController.swift */,
 				4544D00A1CFFD36000E5EE17 /* AnswerVerificationViewController.swift */,
+				458561291CFD26920021D914 /* AnswerInputViewController.swift */,
 				45E2355F1D090C66000BE4DE /* HighScoresTableViewController.swift */,
 				452ED5821D0DFFFD00083C3C /* Helper.swift */,
+				452ED5861D0F9BAB00083C3C /* FinalResultsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			files = (
 				45C7FB571CE1782700A5FCB7 /* QuestionPickerViewController.swift in Sources */,
 				45FD36981CDAD677000163A0 /* Buzzer.xcdatamodeld in Sources */,
+				452ED5871D0F9BAB00083C3C /* FinalResultsViewController.swift in Sources */,
 				45FD36921CDAD677000163A0 /* MenuViewController.swift in Sources */,
 				4526681F1CE4074800A8DF62 /* QuestionPriceCell.swift in Sources */,
 				45E235601D090C66000BE4DE /* HighScoresTableViewController.swift in Sources */,
