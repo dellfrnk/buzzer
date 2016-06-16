@@ -684,6 +684,11 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outletCollection property="playerNames" destination="faK-QJ-6OL" collectionClass="NSMutableArray" id="9uL-Pp-ce9"/>
+                        <outletCollection property="playerNames" destination="n8X-10-Z2d" collectionClass="NSMutableArray" id="Vik-9I-Gke"/>
+                        <outletCollection property="playerNames" destination="ehV-aI-oEl" collectionClass="NSMutableArray" id="dGZ-dp-iwf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GTe-ag-g57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

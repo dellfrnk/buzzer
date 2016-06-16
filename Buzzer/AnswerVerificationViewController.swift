@@ -26,6 +26,7 @@ class AnswerVerificationViewController: UIViewController {
     }
     
     @IBAction func wrongAction(sender: AnyObject) {
+     game?.currentPlayerGotItWrong()
     }
     var game: Game?
     override func viewDidLoad() {
