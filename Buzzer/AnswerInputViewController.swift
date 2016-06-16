@@ -46,6 +46,8 @@ class AnswerInputViewController: UIViewController {
         }
     
     @IBAction func checkAnswer(sender: AnyObject) {
+        game?.currentQuestion?.playerAnswer = answerTextView.text!
+        
         performSegueWithIdentifier("AnswerVerificationSegue", sender: nil)
     }
     

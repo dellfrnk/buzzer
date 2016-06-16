@@ -13,7 +13,7 @@ class Question {
     var question = ""
     var answer = ""
     
-    var playerAnswer = ""
+    var playerAnswer: String = ""
     
     func formattedPrice() -> String {
         return "$\(price)"

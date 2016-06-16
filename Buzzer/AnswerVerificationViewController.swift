@@ -10,13 +10,31 @@ import UIKit
 
 class AnswerVerificationViewController: UIViewController {
 
-        var game: Game?
+    
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    @IBOutlet weak var questionTextView: UITextView!
+    
+    @IBOutlet weak var answerTextView: UILabel!
+    
+    var game: Game?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureUIElements()
 
         // Do any additional setup after loading the view.
     }
 
+    func configureUIElements() {
+        //   self.navigationItem.setHidesBackButton(true, animated:true);
+        
+        categoryLabel.text = game?.currentQuestion?.category?.title
+        priceLabel.text = game?.currentQuestion?.formattedPrice()
+        questionTextView.text = game?.currentQuestion?.question
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
