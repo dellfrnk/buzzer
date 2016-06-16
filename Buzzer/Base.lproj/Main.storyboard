@@ -822,8 +822,10 @@
                     <connections>
                         <outlet property="answerTextView" destination="WBJ-7n-oPA" id="9zr-EM-EJ1"/>
                         <outlet property="categoryLabel" destination="lQF-Cb-l6H" id="KOB-WF-xG5"/>
+                        <outlet property="correctButton" destination="OaM-kr-sXR" id="jf0-on-wgw"/>
                         <outlet property="priceLabel" destination="ocg-gw-fZG" id="Cmk-ii-U6z"/>
                         <outlet property="questionTextView" destination="gcP-8k-8Kl" id="zYj-Pc-OY5"/>
+                        <outlet property="wrongButton" destination="QHV-Iy-VFo" id="4XY-N0-Kdc"/>
                         <segue destination="j9O-wA-aAk" kind="show" identifier="FinalResultsSegue" id="UCg-pv-DvV"/>
                     </connections>
                 </viewController>

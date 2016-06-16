@@ -17,11 +17,26 @@ class AnswerVerificationViewController: UIViewController {
     
     @IBOutlet weak var questionTextView: UITextView!
     
+    @IBOutlet weak var correctButton: UIButton!
     
-    @IBOutlet weak var answerTextView: UITextView!
+    @IBOutlet weak var wrongButton: UIButton!
+    
+     @IBOutlet weak var answerTextView: UITextView!
+    
     
     @IBAction func correctAction(sender: AnyObject) {
         game?.currentPlayerGotItRight()
+        let alert = UIAlertController(title: "Yahoooo!", message: "You are correct!", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: { alert in print("Correct")}))
+        
+      // if let button = sender as? UIButton{
+     //       button.enabled = false
+      //  }
+        
+        correctButton.enabled = false
+        wrongButton.enabled = false
+        
+        presentViewController(alert, animated: true, completion: nil)
         
     }
     
