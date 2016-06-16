@@ -17,8 +17,16 @@ class AnswerVerificationViewController: UIViewController {
     
     @IBOutlet weak var questionTextView: UITextView!
     
-    @IBOutlet weak var answerTextView: UILabel!
     
+    @IBOutlet weak var answerTextView: UITextView!
+    
+    @IBAction func correctAction(sender: AnyObject) {
+        game?.currentPlayerGotItRight()
+        
+    }
+    
+    @IBAction func wrongAction(sender: AnyObject) {
+    }
     var game: Game?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +40,8 @@ class AnswerVerificationViewController: UIViewController {
         
         categoryLabel.text = game?.currentQuestion?.category?.title
         priceLabel.text = game?.currentQuestion?.formattedPrice()
-        questionTextView.text = game?.currentQuestion?.question
+        questionTextView.text = game?.currentQuestion?.answer
+        answerTextView.text = game?.currentQuestion?.playerAnswer
     }
     
     override func didReceiveMemoryWarning() {

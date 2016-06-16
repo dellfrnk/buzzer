@@ -729,10 +729,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaM-kr-sXR">
                                 <rect key="frame" x="16" y="558" width="52" height="30"/>
                                 <state key="normal" title="Correct"/>
+                                <connections>
+                                    <action selector="correctAction:" destination="R57-b4-lwI" eventType="touchUpInside" id="9gf-NY-jyO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHV-Iy-VFo">
                                 <rect key="frame" x="317" y="558" width="46" height="30"/>
                                 <state key="normal" title="Wrong"/>
+                                <connections>
+                                    <action selector="wrongAction:" destination="R57-b4-lwI" eventType="touchUpInside" id="8kE-ht-fER"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gcP-8k-8Kl">
                                 <rect key="frame" x="28" y="165" width="327" height="127"/>
@@ -809,6 +815,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="answerTextView" destination="WBJ-7n-oPA" id="9zr-EM-EJ1"/>
                         <outlet property="categoryLabel" destination="lQF-Cb-l6H" id="KOB-WF-xG5"/>
                         <outlet property="priceLabel" destination="ocg-gw-fZG" id="Cmk-ii-U6z"/>
                         <outlet property="questionTextView" destination="gcP-8k-8Kl" id="zYj-Pc-OY5"/>

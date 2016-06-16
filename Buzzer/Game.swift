@@ -45,5 +45,13 @@ class Game {
             
         })
     }
+    
+    func currentPlayerGotItRight()
+    {
+        guard let currentPlayer = currentPlayer else { return }
+        guard let price = currentQuestion?.price else
+        { return}
+        currentPlayer.score += price
+    }
 
 }
