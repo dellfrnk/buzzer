@@ -196,7 +196,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="answerTextView" destination="HBT-aM-5Sx" id="euH-Di-ILU"/>
+                        <outlet property="answerTextView" destination="sdO-KR-MGI" id="odA-KZ-g9V"/>
                         <outlet property="categoryLabel" destination="xUl-Zk-MsH" id="IhJ-Eg-cBJ"/>
                         <outlet property="priceLabel" destination="Lia-i1-0xi" id="PB8-JF-POh"/>
                         <outlet property="questionTextView" destination="iMh-qU-vfZ" id="c3x-vX-BbF"/>

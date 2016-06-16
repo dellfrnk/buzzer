@@ -21,7 +21,7 @@ class AnswerInputViewController: UIViewController {
     @IBOutlet weak var questionTextView: UITextView!
     
     
-    @IBOutlet weak var answerTextView: UILabel!
+    @IBOutlet weak var answerTextView: UITextView!
     
     
     override func viewDidLoad() {
