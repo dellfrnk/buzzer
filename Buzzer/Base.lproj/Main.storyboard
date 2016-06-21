@@ -108,6 +108,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJk-5a-GxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fKG-A3-KGQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="325.5" y="-100.5"/>
         </scene>
@@ -360,18 +361,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QnV-xw-qQO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QnV-xw-qQO">
                                 <rect key="frame" x="38" y="179" width="271" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 3" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRg-dK-dpa">
-                                <rect key="frame" x="38" y="236" width="271" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 3" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRg-dK-dpa">
+                                <rect key="frame" x="38" y="236" width="271" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXR-yN-UIf">
-                                <rect key="frame" x="162" y="298" width="36" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXR-yN-UIf">
+                                <rect key="frame" x="162" y="297" width="36" height="30"/>
                                 <state key="normal" title="PLAY">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 </state>
@@ -386,21 +387,23 @@
                                     <constraint firstAttribute="height" constant="41" id="x5y-Lv-snO"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 1" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5p-cO-Acc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 1" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5p-cO-Acc">
                                 <rect key="frame" x="38" y="119" width="271" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="a4p-w4-VMx">
-                                <rect key="frame" x="318" y="116" width="50" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="Rv6-65-OWo"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-2" translatesAutoresizingMaskIntoConstraints="NO" id="3xn-Lf-FJT">
                                 <rect key="frame" x="317" y="173" width="50" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Csq-7U-sCB"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="a4p-w4-VMx">
+                                <rect key="frame" x="318" y="116" width="50" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Rv6-65-OWo"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="41" id="ZNd-vK-QG4"/>
+                                    <constraint firstAttribute="width" constant="50" id="ejn-V6-MNX"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -433,6 +436,7 @@
                             <constraint firstItem="Qij-8N-woN" firstAttribute="leading" secondItem="dRg-dK-dpa" secondAttribute="trailing" constant="8" id="sMM-YO-g6H"/>
                             <constraint firstItem="3xn-Lf-FJT" firstAttribute="leading" secondItem="QnV-xw-qQO" secondAttribute="trailing" constant="8" id="vUq-6l-U6H"/>
                             <constraint firstItem="PEb-YA-ojb" firstAttribute="leading" secondItem="P2f-co-TZo" secondAttribute="leadingMargin" constant="3" id="wfa-Aw-oxb"/>
+                            <constraint firstItem="a4p-w4-VMx" firstAttribute="bottom" secondItem="i5p-cO-Acc" secondAttribute="bottom" id="xKJ-Sr-p4s"/>
                         </constraints>
                     </view>
                     <connections>
@@ -440,6 +444,9 @@
                         <outlet property="player1Name" destination="i5p-cO-Acc" id="LSp-mS-hxl"/>
                         <outlet property="player2Name" destination="QnV-xw-qQO" id="i1A-gx-P2A"/>
                         <outlet property="player3Name" destination="dRg-dK-dpa" id="X9C-8S-3Tb"/>
+                        <outletCollection property="playerImages" destination="a4p-w4-VMx" collectionClass="NSMutableArray" id="HEZ-ke-lJN"/>
+                        <outletCollection property="playerImages" destination="3xn-Lf-FJT" collectionClass="NSMutableArray" id="RcA-2P-dZb"/>
+                        <outletCollection property="playerImages" destination="Qij-8N-woN" collectionClass="NSMutableArray" id="ZL8-fi-7lD"/>
                         <segue destination="O1Q-Wy-FbV" kind="show" identifier="GoToQuestionPicker" id="5Hx-Zh-7dQ"/>
                     </connections>
                 </viewController>
@@ -625,14 +632,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH3-qU-oDN">
                                 <rect key="frame" x="16" y="584" width="71" height="30"/>
                                 <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgainAction:" destination="j9O-wA-aAk" eventType="touchUpInside" id="hr3-MS-qs0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pf-wb-PGR">
                                 <rect key="frame" x="135" y="584" width="106" height="30"/>
                                 <state key="normal" title="Return to Menu"/>
+                                <connections>
+                                    <action selector="returnToMenuAction:" destination="j9O-wA-aAk" eventType="touchUpInside" id="OYi-JH-kg5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pva-Op-vUP">
                                 <rect key="frame" x="276" y="584" width="84" height="30"/>
                                 <state key="normal" title="Share Score"/>
+                                <connections>
+                                    <action selector="shareScoreAction:" destination="j9O-wA-aAk" eventType="touchUpInside" id="oP6-40-qdg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrU-rs-4yO">
                                 <rect key="frame" x="140" y="84" width="96" height="21"/>
@@ -688,6 +704,7 @@
                         <outletCollection property="playerNames" destination="faK-QJ-6OL" collectionClass="NSMutableArray" id="AfM-qt-YZa"/>
                         <outletCollection property="playerNames" destination="n8X-10-Z2d" collectionClass="NSMutableArray" id="iiO-kD-yJ8"/>
                         <outletCollection property="playerNames" destination="ehV-aI-oEl" collectionClass="NSMutableArray" id="QhV-4r-O6E"/>
+                        <segue destination="fKG-A3-KGQ" kind="unwind" identifier="unwindToMenuVC" unwindAction="unwindToMenuViewController:" id="5ou-yh-Mvn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GTe-ag-g57" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -827,6 +844,7 @@
                         <outlet property="questionTextView" destination="gcP-8k-8Kl" id="zYj-Pc-OY5"/>
                         <outlet property="wrongButton" destination="QHV-Iy-VFo" id="4XY-N0-Kdc"/>
                         <segue destination="j9O-wA-aAk" kind="show" identifier="FinalResultsSegue" id="UCg-pv-DvV"/>
+                        <segue destination="fKG-A3-KGQ" kind="unwind" identifier="unwindToMenuVC" unwindAction="unwindToMenuViewController:" id="uDq-ev-jzu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkA-ZQ-PiH" userLabel="First Responder" sceneMemberID="firstResponder"/>

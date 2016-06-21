@@ -22,6 +22,18 @@ class FinalResultsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func playAgainAction(sender: AnyObject) {
+    }
+    
+    
+    @IBAction func returnToMenuAction(sender: AnyObject) {
+        performSegueWithIdentifier("unwindToMenuVC", sender: nil)
+    }
+    
+    @IBAction func shareScoreAction(sender: AnyObject) {
+    }
+    
+    
     func configureUI()
     {
         var players = [Player]()

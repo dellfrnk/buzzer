@@ -11,8 +11,37 @@ import UIKit
 
 class PlayerInputViewController : UIViewController, UITextFieldDelegate {
     
+    
+    @IBOutlet var playerImages: [UIImageView]!
+    
+    @IBOutlet weak var player1Name: UITextField!
+    
+    @IBOutlet weak var player2Name: UITextField!
+    
+    @IBOutlet weak var player3Name: UITextField!
+    
+    @IBOutlet weak var playButton: UIButton!
+    
+    
+    func addGestureRecognizer(){
+        for eachImageView in playerImages {
+            let gestureRecognizer = UIGestureRecognizer(target: self, action: #selector(PlayerInputViewController.playerImageTapped(_:)))
+            //    gestureRecognizer.delegate = self as UIGestureRecognizer!
+                
+                eachImageView.addGestureRecognizer(gestureRecognizer)
+            }
+        
+    }
+    
+    func playerImageTapped(sender: UITapGestureRecognizer) {
+       // [self player]
+        print("hello")
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        addGestureRecognizer()
         self.player1Name.delegate = self
         self.player2Name.delegate = self
         self.player3Name.delegate = self
@@ -59,13 +88,8 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
     let unsafeChars = NSCharacterSet.alphanumericCharacterSet().invertedSet
     let letters = NSCharacterSet.alphanumericCharacterSet()
     
-    @IBOutlet weak var player1Name: UITextField!
-    
-    @IBOutlet weak var player2Name: UITextField!
-    
-    @IBOutlet weak var player3Name: UITextField!
-    
-    @IBOutlet weak var playButton: UIButton!
+
+
     
 
     

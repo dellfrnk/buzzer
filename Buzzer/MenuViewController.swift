@@ -19,6 +19,10 @@ class MenuViewController: UIViewController {
     
     @IBOutlet weak var soundSwitch: UISwitch!
     
+    @IBAction func unwindToMenuViewController(segue: UIStoryboardSegue)
+    {
+        
+    }
 
     @IBAction func soundSwitchToggle(sender: AnyObject) {
         
