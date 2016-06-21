@@ -26,9 +26,8 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
     func addGestureRecognizer(){
         for eachImageView in playerImages {
             let gestureRecognizer = UIGestureRecognizer(target: self, action: #selector(PlayerInputViewController.playerImageTapped(_:)))
-            //    gestureRecognizer.delegate = self as UIGestureRecognizer!
-                
-                eachImageView.addGestureRecognizer(gestureRecognizer)
+            //gestureRecognizer.delegate = self
+            eachImageView.addGestureRecognizer(gestureRecognizer)
             }
         
     }
