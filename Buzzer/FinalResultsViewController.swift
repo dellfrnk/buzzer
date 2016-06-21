@@ -38,12 +38,13 @@ class FinalResultsViewController: UIViewController {
         //simplest, implicit
        // players.sortInPlace({$0.score > $1.score})
         
-        //or
-       players.sortInPlace({ playerA, playerB in playerA.score > playerB.score})
-       // var i = 0
         for i in 0..<3 {
             playerNames[i].text = "\(players[i].name)       \(players[i].score)"
         }
+        //or
+       players.sortInPlace({ playerA, playerB in playerA.score > playerB.score})
+       // var i = 0
+        
         
        saveHighScore(players[0])
         

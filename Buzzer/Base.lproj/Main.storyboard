@@ -608,12 +608,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8X-10-Z2d">
-                                <rect key="frame" x="131" y="255" width="115" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4HH-39-aPV">
                                 <rect key="frame" x="130" y="342" width="115" height="21"/>
                                 <subviews>
@@ -642,6 +636,12 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrU-rs-4yO">
                                 <rect key="frame" x="140" y="84" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8X-10-Z2d">
+                                <rect key="frame" x="131" y="255" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -685,9 +685,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outletCollection property="playerNames" destination="faK-QJ-6OL" collectionClass="NSMutableArray" id="9uL-Pp-ce9"/>
-                        <outletCollection property="playerNames" destination="n8X-10-Z2d" collectionClass="NSMutableArray" id="Vik-9I-Gke"/>
-                        <outletCollection property="playerNames" destination="ehV-aI-oEl" collectionClass="NSMutableArray" id="dGZ-dp-iwf"/>
+                        <outletCollection property="playerNames" destination="faK-QJ-6OL" collectionClass="NSMutableArray" id="AfM-qt-YZa"/>
+                        <outletCollection property="playerNames" destination="n8X-10-Z2d" collectionClass="NSMutableArray" id="iiO-kD-yJ8"/>
+                        <outletCollection property="playerNames" destination="ehV-aI-oEl" collectionClass="NSMutableArray" id="QhV-4r-O6E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GTe-ag-g57" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -812,9 +812,9 @@
                                 <exclude reference="xTc-9l-LhJ"/>
                                 <exclude reference="Rq4-oM-4wr"/>
                                 <exclude reference="fnS-Uj-rKw"/>
+                                <exclude reference="A2l-qE-NV9"/>
                                 <exclude reference="O77-SD-bTv"/>
                                 <exclude reference="QW9-CK-QEd"/>
-                                <exclude reference="A2l-qE-NV9"/>
                             </mask>
                         </variation>
                     </view>
