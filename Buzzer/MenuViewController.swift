@@ -129,30 +129,6 @@ class MenuViewController: UIViewController {
     {
         let helper = Helper()
         helper.swiped(gesture, controller: self)
-//        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-//            
-//            switch swipeGesture.direction {
-//                
-//            case UISwipeGestureRecognizerDirection.Left:
-//                print("User swiped Left")
-//              //  swipedLeft = true
-//                self.performSegueWithIdentifier("playMenuIdentifier", sender: self)
-//           // }
-//                //self.performSegueWithIdentifier("playMenuIdentifier")
-//                
-//            case UISwipeGestureRecognizerDirection.Right:
-//                print("User swiped Right")
-//                
-//                
-//                //self.dismissViewControllerAnimated(true, completion: {});
-//            //self.navigationController?.popViewControllerAnimated(true);
-//            default:
-//                break
-//            }
-//            
-//        }
-//        print("swiped")
-//        // print(Helper.x)
     }
 
     override func didReceiveMemoryWarning() {

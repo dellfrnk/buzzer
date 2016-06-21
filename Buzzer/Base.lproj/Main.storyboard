@@ -436,7 +436,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="playButton" destination="eXR-yN-UIf" id="8fG-TW-YSg"/>
+                        <outlet property="playButton" destination="eXR-yN-UIf" id="685-sG-kyW"/>
                         <outlet property="player1Name" destination="i5p-cO-Acc" id="LSp-mS-hxl"/>
                         <outlet property="player2Name" destination="QnV-xw-qQO" id="i1A-gx-P2A"/>
                         <outlet property="player3Name" destination="dRg-dK-dpa" id="X9C-8S-3Tb"/>
@@ -480,7 +480,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jt-SB-otn">
-                                                    <rect key="frame" x="10" y="15" width="31" height="21"/>
+                                                    <rect key="frame" x="10" y="14" width="31" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
