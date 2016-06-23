@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PlayerInputViewController : UIViewController, UITextFieldDelegate {
+class PlayerInputViewController : UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     @IBOutlet var playerImages: [UIImageView]!
@@ -22,11 +22,21 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var playButton: UIButton!
     
+    var selectedImageView: UIImageView?
+    let imagePicker = UIImagePickerController()
+    
     
     func addGestureRecognizer(){
         for eachImageView in playerImages {
-            let gestureRecognizer = UIGestureRecognizer(target: self, action: #selector(PlayerInputViewController.playerImageTapped(_:)))
-            //gestureRecognizer.delegate = self
+            
+            //ok
+            //action: Selector("playerImageTapped:"))
+            //OR
+            //#selector(playerImageTapped)
+            
+            let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PlayerInputViewController.playerImageTapped(_:)))
+            //requires UIGestureRecognizerDelegate
+            gestureRecognizer.delegate = self
             eachImageView.addGestureRecognizer(gestureRecognizer)
             }
         
@@ -35,12 +45,44 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate {
     func playerImageTapped(sender: UITapGestureRecognizer) {
        // [self player]
         print("hello")
+       //let imageView = sender.view as? UIImageView
+        
+       selectedImageView = sender.view as? UIImageView
+       showImagePicker()
+        
     }
     
-
+    func showImagePicker() {
+        
+        //UIImagePickerControllerSourceType.Photolibrary
+        
+        if UIImagePickerController.isSourceTypeAvailable((.PhotoLibrary)) {
+            //self refers to the instance of the whole class
+            imagePicker.delegate = self
+            imagePicker.sourceType = .PhotoLibrary
+            imagePicker.allowsEditing = false
+            
+        }
+        //present the image 
+        //<#T##viewControllerToPresent: UIViewController##UIViewController#> = imagepicker
+        presentViewController(imagePicker, animated: true, completion: nil)
+        
+    }
+    
+  // MARK:- UIImagePickerControllerDelegate
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+       print("cancel")
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+       print("did finish printing image")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addGestureRecognizer()
+        
         self.player1Name.delegate = self
         self.player2Name.delegate = self
         self.player3Name.delegate = self

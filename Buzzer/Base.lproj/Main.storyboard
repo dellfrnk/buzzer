@@ -407,7 +407,7 @@
                                     <action selector="playGameAction:" destination="W3V-dH-2UU" eventType="touchUpInside" id="JLa-A3-w2T"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carimg" translatesAutoresizingMaskIntoConstraints="NO" id="Qij-8N-woN">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carimg" translatesAutoresizingMaskIntoConstraints="NO" id="Qij-8N-woN">
                                 <rect key="frame" x="286" y="230" width="40" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="tYO-Z6-bFc"/>
@@ -423,7 +423,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-2" translatesAutoresizingMaskIntoConstraints="NO" id="3xn-Lf-FJT">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spiderman" translatesAutoresizingMaskIntoConstraints="NO" id="3xn-Lf-FJT">
                                 <rect key="frame" x="286" y="173" width="40" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="Csq-7U-sCB"/>
@@ -434,7 +434,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="a4p-w4-VMx">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="owl" translatesAutoresizingMaskIntoConstraints="NO" id="a4p-w4-VMx">
                                 <rect key="frame" x="286" y="108" width="40" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="2SK-bE-Vfs"/>
@@ -1038,8 +1038,8 @@
     </scenes>
     <resources>
         <image name="carimg" width="276" height="183"/>
-        <image name="images" width="318" height="159"/>
-        <image name="images-2" width="300" height="168"/>
         <image name="jeopardy" width="4800" height="2700"/>
+        <image name="owl" width="318" height="159"/>
+        <image name="spiderman" width="300" height="168"/>
     </resources>
 </document>
