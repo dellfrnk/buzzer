@@ -73,11 +73,25 @@ class PlayerInputViewController : UIViewController, UITextFieldDelegate, UIGestu
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
        print("cancel")
+       selectedImageView = nil
+       dismissViewControllerAnimated(true, completion:nil)
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
        print("did finish printing image")
+        
+        //info[] is from parms
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {return}
+        guard selectedImageView != nil else { return }
+        selectedImageView?.image = image
+        dismissViewControllerAnimated(true, completion: nil)
+        
     }
+    
+   
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
